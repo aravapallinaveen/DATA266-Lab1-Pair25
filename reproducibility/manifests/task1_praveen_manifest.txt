@@ -1,0 +1,36 @@
+DATA266 Lab 1 — Task 1 Manifest
+
+Student: Praveen
+
+Best checkpoint:
+D:\DATA266_Lab1\task1_llm\praveen\checkpoints\task1_gpt_praveen_best.pt
+
+Best epoch:
+10
+
+Metrics:
+D:\DATA266_Lab1\task1_llm\praveen\metrics_report.csv
+
+Training history:
+D:\DATA266_Lab1\task1_llm\praveen\task1_training_history.csv
+
+Raw training log:
+D:\DATA266_Lab1\reproducibility\raw_logs\task1_llm_praveen_training_raw.txt
+
+Loss curve:
+D:\DATA266_Lab1\task1_llm\praveen\outputs\train_val_loss_curve.png
+
+Generated samples:
+D:\DATA266_Lab1\task1_llm\praveen\outputs\generated_samples.csv
+
+Failure analysis:
+D:\DATA266_Lab1\task1_llm\praveen\failure_analysis.md
+
+Results summary:
+D:\DATA266_Lab1\task1_llm\praveen\results.md
+
+Notebook:
+D:\DATA266_Lab1\task1_llm\praveen\src\Task1_LLM_Praveen.ipynb
+
+GPU:
+NVIDIA GeForce RTX 5090

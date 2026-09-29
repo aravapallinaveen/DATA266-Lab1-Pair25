@@ -1,0 +1,26 @@
+DATA266 Lab 1 - Task 1 - Praveen Official Training Run
+======================================================================
+Epochs: 10
+Batch size: 192
+Block size: 128
+Embedding dimension: 192
+Attention heads: 6
+Transformer layers: 3
+FFN multiplier: 3
+Dropout: 0.15
+Learning rate: 0.0004
+Warmup steps: 400
+Seed: 2026
+GPU: NVIDIA GeForce RTX 5090
+======================================================================
+
+Epoch 01/10 | Train Loss: 1.3193 | Val Loss: 0.9041 | PPL: 2.47 | BPC: 1.304 | Top-1: 71.64% | Gap: -0.4153 | Grad: 0.984 | Tokens/s: 2,271,559 | Time: 0.66 min <-- BEST
+Epoch 02/10 | Train Loss: 0.9441 | Val Loss: 0.8449 | PPL: 2.33 | BPC: 1.219 | Top-1: 73.32% | Gap: -0.0992 | Grad: 0.554 | Tokens/s: 2,267,300 | Time: 0.66 min <-- BEST
+Epoch 03/10 | Train Loss: 0.8994 | Val Loss: 0.8161 | PPL: 2.26 | BPC: 1.177 | Top-1: 74.22% | Gap: -0.0833 | Grad: 0.476 | Tokens/s: 2,168,216 | Time: 0.69 min <-- BEST
+Epoch 04/10 | Train Loss: 0.8758 | Val Loss: 0.7996 | PPL: 2.22 | BPC: 1.154 | Top-1: 74.76% | Gap: -0.0762 | Grad: 0.448 | Tokens/s: 2,232,096 | Time: 0.67 min <-- BEST
+Epoch 05/10 | Train Loss: 0.8596 | Val Loss: 0.7883 | PPL: 2.20 | BPC: 1.137 | Top-1: 75.10% | Gap: -0.0713 | Grad: 0.435 | Tokens/s: 2,276,838 | Time: 0.66 min <-- BEST
+Epoch 06/10 | Train Loss: 0.8475 | Val Loss: 0.7787 | PPL: 2.18 | BPC: 1.123 | Top-1: 75.38% | Gap: -0.0688 | Grad: 0.432 | Tokens/s: 2,175,671 | Time: 0.69 min <-- BEST
+Epoch 07/10 | Train Loss: 0.8383 | Val Loss: 0.7716 | PPL: 2.16 | BPC: 1.113 | Top-1: 75.60% | Gap: -0.0667 | Grad: 0.432 | Tokens/s: 2,274,655 | Time: 0.66 min <-- BEST
+Epoch 08/10 | Train Loss: 0.8314 | Val Loss: 0.7665 | PPL: 2.15 | BPC: 1.106 | Top-1: 75.75% | Gap: -0.0649 | Grad: 0.434 | Tokens/s: 2,188,881 | Time: 0.68 min <-- BEST
+Epoch 09/10 | Train Loss: 0.8265 | Val Loss: 0.7640 | PPL: 2.15 | BPC: 1.102 | Top-1: 75.85% | Gap: -0.0625 | Grad: 0.437 | Tokens/s: 2,233,755 | Time: 0.67 min <-- BEST
+Epoch 10/10 | Train Loss: 0.8237 | Val Loss: 0.7626 | PPL: 2.14 | BPC: 1.100 | Top-1: 75.89% | Gap: -0.0611 | Grad: 0.442 | Tokens/s: 2,284,409 | Time: 0.66 min <-- BEST
