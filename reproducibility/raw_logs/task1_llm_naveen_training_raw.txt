@@ -1,0 +1,23 @@
+DATA266 Lab 1 - Task 1 Official Training Run
+======================================================================
+Epochs: 10
+Batch size: 128
+Block size: 256
+Embedding dimension: 256
+Heads: 8
+Layers: 4
+Learning rate: 0.0003
+Warmup steps: 500
+GPU: NVIDIA GeForce RTX 5090
+======================================================================
+
+Epoch 01/10 | Train Loss: 1.4190 | Val Loss: 0.8544 | PPL: 2.35 | BPC: 1.233 | Top-1: 73.14% | Gap: -0.5646 | Grad: 0.988 | Tokens/s: 907,808 | Time: 1.65 min <-- BEST
+Epoch 02/10 | Train Loss: 0.8400 | Val Loss: 0.7421 | PPL: 2.10 | BPC: 1.071 | Top-1: 76.55% | Gap: -0.0980 | Grad: 0.510 | Tokens/s: 908,246 | Time: 1.65 min <-- BEST
+Epoch 03/10 | Train Loss: 0.7627 | Val Loss: 0.6990 | PPL: 2.01 | BPC: 1.008 | Top-1: 77.87% | Gap: -0.0637 | Grad: 0.400 | Tokens/s: 909,330 | Time: 1.64 min <-- BEST
+Epoch 04/10 | Train Loss: 0.7281 | Val Loss: 0.6766 | PPL: 1.97 | BPC: 0.976 | Top-1: 78.53% | Gap: -0.0515 | Grad: 0.360 | Tokens/s: 909,478 | Time: 1.64 min <-- BEST
+Epoch 05/10 | Train Loss: 0.7070 | Val Loss: 0.6605 | PPL: 1.94 | BPC: 0.953 | Top-1: 79.02% | Gap: -0.0465 | Grad: 0.343 | Tokens/s: 907,994 | Time: 1.65 min <-- BEST
+Epoch 06/10 | Train Loss: 0.6919 | Val Loss: 0.6493 | PPL: 1.91 | BPC: 0.937 | Top-1: 79.35% | Gap: -0.0427 | Grad: 0.337 | Tokens/s: 909,721 | Time: 1.64 min <-- BEST
+Epoch 07/10 | Train Loss: 0.6809 | Val Loss: 0.6410 | PPL: 1.90 | BPC: 0.925 | Top-1: 79.60% | Gap: -0.0399 | Grad: 0.338 | Tokens/s: 910,967 | Time: 1.64 min <-- BEST
+Epoch 08/10 | Train Loss: 0.6727 | Val Loss: 0.6345 | PPL: 1.89 | BPC: 0.915 | Top-1: 79.80% | Gap: -0.0382 | Grad: 0.341 | Tokens/s: 906,492 | Time: 1.65 min <-- BEST
+Epoch 09/10 | Train Loss: 0.6669 | Val Loss: 0.6312 | PPL: 1.88 | BPC: 0.911 | Top-1: 79.91% | Gap: -0.0357 | Grad: 0.345 | Tokens/s: 910,595 | Time: 1.64 min <-- BEST
+Epoch 10/10 | Train Loss: 0.6634 | Val Loss: 0.6285 | PPL: 1.87 | BPC: 0.907 | Top-1: 79.98% | Gap: -0.0349 | Grad: 0.349 | Tokens/s: 913,561 | Time: 1.64 min <-- BEST

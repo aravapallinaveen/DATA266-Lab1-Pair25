@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Raw datasets
+task1_llm/data/*
+task2_sentiment/data/*
+task3_gan/data/*
+
+# Local caches
+.cache/
+huggingface/
+
+# Secrets
+.env
+kaggle.json
+*.key
