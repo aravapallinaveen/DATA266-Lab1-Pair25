@@ -1,0 +1,3 @@
+baseline_correct_comparison_wrong,baseline_wrong_comparison_correct,discordant_pairs,exact_p_value,comparison
+564,634,1198,0.046159355858554796,baseline_gru vs experimental_bigru
+553,681,1234,0.00029657519607306527,baseline_gru vs experimental_stacked_bigru

@@ -1,0 +1,13 @@
+{
+  "sid4": 171,
+  "seed": 171,
+  "max_len": 256,
+  "min_freq": 5,
+  "vocab_size": 60713,
+  "pad_idx": 0,
+  "unk_idx": 1,
+  "train_size": 504000,
+  "validation_size": 56000,
+  "test_size": 38000,
+  "empty_after_preprocessing": "Replace with one <UNK> token and set sequence length to 1"
+}

@@ -1,0 +1,30 @@
+{
+  "baseline_gru": {
+    "model_name": "Baseline C - Single-Layer GRU",
+    "embedding_dim": 64,
+    "hidden_dim": 64,
+    "dropout": 0.2,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "epochs": 3
+  },
+  "experimental_bigru": {
+    "model_name": "Experimental E - Bidirectional GRU",
+    "embedding_dim": 128,
+    "hidden_dim": 128,
+    "dropout": 0.3,
+    "batch_size": 256,
+    "learning_rate": 0.0005,
+    "epochs": 5
+  },
+  "experimental_stacked_bigru": {
+    "model_name": "Experimental I - 2-Layer BiGRU + MeanMax Pooling",
+    "embedding_dim": 192,
+    "hidden_dim": 192,
+    "dropout": 0.4,
+    "batch_size": 512,
+    "learning_rate": 0.0003,
+    "epochs": 8,
+    "pooling": "meanmax"
+  }
+}

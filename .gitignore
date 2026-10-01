@@ -17,3 +17,10 @@ huggingface/
 .env
 kaggle.json
 *.key
+
+# DATA266 Task 2 generated encoded arrays
+task2_sentiment/*/data_processed/*.npy
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/

@@ -1,0 +1,84 @@
+DATA266 Lab 1 - Task 2 Manifest
+Member: Naveen Aravapalli
+Task: Yelp Polarity Sentiment Classification
+
+DATA / PREPROCESSING
+Dataset: fancyzhx/yelp_polarity
+Seed: 171
+Train examples: 504000
+Validation examples: 56000
+Test examples: 38000
+MAX_LEN: 256
+MIN_FREQ: 5
+Vocabulary size: 60713
+PAD index: 0
+UNK index: 1
+
+HARDWARE / SOFTWARE
+CPU: AMD Ryzen 9 7950X 16-Core Processor
+GPU: NVIDIA GeForce RTX 4090
+GPU VRAM: 23.99 GB
+Python: 3.12.14
+PyTorch: 2.14.0+cu130
+CUDA runtime: 13.0
+
+MODEL 1 - BASELINE C
+Architecture: Single-layer unidirectional GRU
+Embedding dim: 64
+Hidden dim: 64
+Dropout: 0.2
+Batch size: 256
+Learning rate: 0.001
+Epochs: 3
+Parameters: 3910657
+Best epoch: 3
+Best checkpoint: task2_sentiment/naveen/checkpoints/baseline_gru_best.pt
+Last checkpoint: task2_sentiment/naveen/checkpoints/baseline_gru_last.pt
+History: task2_sentiment/naveen/baseline_gru_training_history.csv
+Raw log: reproducibility/raw_logs/task2_naveen_baseline_gru_training_raw.txt
+
+MODEL 2 - EXPERIMENTAL E
+Architecture: Single-layer bidirectional GRU
+Embedding dim: 128
+Hidden dim: 128
+Dropout: 0.3
+Batch size: 256
+Learning rate: 0.0005
+Epochs: 5
+Parameters: 7969665
+Best epoch: 5
+Best checkpoint: task2_sentiment/naveen/checkpoints/experimental_bigru_best.pt
+Last checkpoint: task2_sentiment/naveen/checkpoints/experimental_bigru_last.pt
+History: task2_sentiment/naveen/experimental_bigru_training_history.csv
+Raw log: reproducibility/raw_logs/task2_naveen_experimental_bigru_training_raw.txt
+
+MODEL 3 - EXPERIMENTAL I
+Architecture: Two-layer bidirectional GRU + MeanMax pooling + MLP
+Embedding dim: 192
+Hidden dim: 192
+Dropout: 0.4
+Batch size: 512
+Learning rate: 0.0003
+Epochs: 8
+Pooling: meanmax
+Parameters: 12915265
+Best epoch: 7
+Best validation loss: 0.16180902085974557
+Best validation accuracy: 0.9431607142857142
+Best validation macro-F1: 0.9431595171374194
+Best checkpoint: task2_sentiment/naveen/checkpoints/experimental_stacked_bigru_best.pt
+Last checkpoint: task2_sentiment/naveen/checkpoints/experimental_stacked_bigru_last.pt
+History: task2_sentiment/naveen/experimental_stacked_bigru_training_history.csv
+
+NOTE:
+The original Experimental I raw training log was overwritten when the completed training cell was accidentally launched a second time. The accidental rerun was interrupted before completing epoch 1. The completed best/last checkpoints and 8-epoch training-history CSV were preserved. See task2_sentiment/naveen/experimental_stacked_bigru_recovery_note.md.
+
+IMPORTANT OUTPUTS
+Core metrics: task2_sentiment/naveen/outputs/core_test_metrics.csv
+Bootstrap CIs: task2_sentiment/naveen/outputs/bootstrap_95ci.csv
+McNemar tests: task2_sentiment/naveen/outputs/mcnemar_tests.csv
+Slice robustness: task2_sentiment/naveen/outputs/slice_robustness_metrics.csv
+Manual error worksheet: task2_sentiment/naveen/outputs/manual_20_error_review.csv
+Preprocessing config: task2_sentiment/naveen/data_processed/preprocessing_config.json
+Model configs: task2_sentiment/naveen/data_processed/model_configs.json
+Vocabulary: task2_sentiment/naveen/data_processed/word_to_idx.json

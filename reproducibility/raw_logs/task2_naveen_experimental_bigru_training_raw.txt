@@ -1,0 +1,38 @@
+==========================================================================================
+DATA266 LAB 1 - TASK 2 OFFICIAL TRAINING RUN
+==========================================================================================
+Model key: experimental_bigru
+Model: Experimental E - Bidirectional GRU
+Seed: 171
+CPU: AMD Ryzen 9 7950X 16-Core Processor
+GPU: NVIDIA GeForce RTX 4090
+PyTorch: 2.14.0+cu130
+CUDA runtime: 13.0
+Vocabulary size: 60713
+MAX_LEN: 256
+Embedding dim: 128
+Hidden dim: 128
+Dropout: 0.3
+Batch size: 256
+Learning rate: 0.0005
+Epochs: 5
+Parameters: 7,969,665
+------------------------------------------------------------------------------------------
+Epoch 01/5 | Train Loss 0.2647 | Val Loss 0.2533 | Val Acc 91.74% | Val Macro-F1 0.9174 | 5,223.2 ex/s | 96.5s
+  -> Saved BEST checkpoint (epoch 1)
+Epoch 02/5 | Train Loss 0.1869 | Val Loss 0.1790 | Val Acc 93.40% | Val Macro-F1 0.9340 | 5,255.8 ex/s | 95.9s
+  -> Saved BEST checkpoint (epoch 2)
+Epoch 03/5 | Train Loss 0.1645 | Val Loss 0.1897 | Val Acc 93.60% | Val Macro-F1 0.9360 | 5,167.8 ex/s | 97.5s
+Epoch 04/5 | Train Loss 0.1515 | Val Loss 0.1694 | Val Acc 93.97% | Val Macro-F1 0.9397 | 5,118.5 ex/s | 98.5s
+  -> Saved BEST checkpoint (epoch 4)
+Epoch 05/5 | Train Loss 0.1402 | Val Loss 0.1675 | Val Acc 94.14% | Val Macro-F1 0.9414 | 5,212.4 ex/s | 96.7s
+  -> Saved BEST checkpoint (epoch 5)
+------------------------------------------------------------------------------------------
+Best epoch: 5
+Best validation loss: 0.167524
+Total run time: 8.42 min
+Training examples/sec: 5,195.1
+Peak GPU memory: 0.39 GB
+Best checkpoint: experimental_bigru_best.pt
+Last checkpoint: experimental_bigru_last.pt
+==========================================================================================

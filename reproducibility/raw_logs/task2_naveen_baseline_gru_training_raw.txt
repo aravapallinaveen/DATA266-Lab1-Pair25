@@ -1,0 +1,35 @@
+==========================================================================================
+DATA266 LAB 1 - TASK 2 OFFICIAL TRAINING RUN
+==========================================================================================
+Model key: baseline_gru
+Model: Baseline C - Single-Layer GRU
+Seed: 171
+CPU: AMD Ryzen 9 7950X 16-Core Processor
+GPU: NVIDIA GeForce RTX 4090
+PyTorch: 2.14.0+cu130
+CUDA runtime: 13.0
+Vocabulary size: 60713
+MAX_LEN: 256
+Embedding dim: 64
+Hidden dim: 64
+Dropout: 0.2
+Batch size: 256
+Learning rate: 0.001
+Epochs: 3
+Parameters: 3,910,657
+------------------------------------------------------------------------------------------
+Epoch 01/3 | Train Loss 0.2724 | Val Loss 0.2052 | Val Acc 92.44% | Val Macro-F1 0.9244 | 9,485.5 ex/s | 53.1s
+  -> Saved BEST checkpoint (epoch 1)
+Epoch 02/3 | Train Loss 0.1806 | Val Loss 0.1718 | Val Acc 93.23% | Val Macro-F1 0.9322 | 9,626.1 ex/s | 52.4s
+  -> Saved BEST checkpoint (epoch 2)
+Epoch 03/3 | Train Loss 0.1557 | Val Loss 0.1574 | Val Acc 93.87% | Val Macro-F1 0.9387 | 8,834.4 ex/s | 57.0s
+  -> Saved BEST checkpoint (epoch 3)
+------------------------------------------------------------------------------------------
+Best epoch: 3
+Best validation loss: 0.157442
+Total run time: 2.83 min
+Training examples/sec: 9,302.2
+Peak GPU memory: 0.14 GB
+Best checkpoint: baseline_gru_best.pt
+Last checkpoint: baseline_gru_last.pt
+==========================================================================================
