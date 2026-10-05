@@ -127,6 +127,18 @@ def main():
     vocab.update({t:i for i,(t,c) in enumerate(sorted(((t,c) for t,c in counts.items() if c>=5),key=lambda z:(-z[1],z[0])),2)})
     json.dump(vocab,open(out/"data_processed/word_to_idx.json","w")); json.dump({"sid":SID,"seed":SEED,"max_len":args.max_len,"vocab_size":len(vocab)},open(out/"data_processed/config.json","w"),indent=2)
     arrays={k:encode(v,vocab,args.max_len) for k,v in rows.items()}
+    test_texts=[str(row["text"]) for row in rows["test"]]
+    pd.DataFrame([
+        {"split":k,"examples":len(v),
+         "missing_text":sum(row["text"] is None for row in v),
+         "empty_text":sum(not str(row["text"]).strip() for row in v),
+         "invalid_label":sum(int(row["label"]) not in (0,1) for row in v)}
+        for k,v in rows.items()
+    ]).to_csv(out/"outputs/data_quality.csv",index=False)
+    pd.DataFrame([
+        {"label":label,"count":int(sum(int(row["label"])==label for row in rows["train"]))}
+        for label in (0,1)
+    ]).to_csv(out/"outputs/class_distribution.csv",index=False)
     def loader(k,shuffle):
         x,y,l=arrays[k]; return DataLoader(TensorDataset(torch.from_numpy(x),torch.from_numpy(y),torch.from_numpy(l)),batch_size=args.batch_size,shuffle=shuffle,pin_memory=torch.cuda.is_available())
     tr,va,te=loader("train",True),loader("validation",False),loader("test",False)
@@ -135,6 +147,8 @@ def main():
     allrows=[]; preds={}
     for name,m in specs.items():
         h,secs,throughput,peak_gb=train_one(m.to(device),name,(tr,va),device,args.epochs,out/"checkpoints"); pd.DataFrame(h).to_csv(out/f"{name}_training_history.csv",index=False)
+        best_state=torch.load(out/"checkpoints"/f"{name}_best.pt",map_location=device)
+        m.load_state_dict(best_state["model"])
         y,p=predict(m,te,device); d,pred=metrics(y,p); d.update(model=name,training_seconds=secs,examples_per_sec=throughput,peak_memory_gb=peak_gb,parameters=sum(x.numel() for x in m.parameters())); allrows.append(d); preds[name]=(y,p,pred)
         pd.DataFrame(confusion_matrix(y,pred)).to_csv(out/"outputs"/f"{name}_confusion_matrix.csv",index=False)
     pd.DataFrame(allrows).to_csv(out/"outputs/core_test_metrics.csv",index=False)
@@ -162,9 +176,9 @@ def main():
         ("near_threshold_error", err[np.argsort(abs(p[err] - .5))[:5]]),
     ]
     for cat,ix in groups:
-        for i in ix: rows20.append({"index":int(i),"category":cat,"label":int(y[i]),"prediction":int(pred[i]),"prob_positive":float(p[i]),"error_type":"","observation":"","testable_fix":""})
+        for i in ix: rows20.append({"index":int(i),"category":cat,"label":int(y[i]),"prediction":int(pred[i]),"prob_positive":float(p[i]),"processed_length":int(arrays["test"][2][i]),"text":test_texts[i],"error_type":"","observation":"","testable_fix":""})
     used={r["index"] for r in rows20}
     for i in err:
-        if i not in used and len(rows20)<20: rows20.append({"index":int(i),"category":"slice_specific_failure","label":int(y[i]),"prediction":int(pred[i]),"prob_positive":float(p[i]),"error_type":"","observation":"","testable_fix":""})
+        if i not in used and len(rows20)<20: rows20.append({"index":int(i),"category":"slice_specific_failure","label":int(y[i]),"prediction":int(pred[i]),"prob_positive":float(p[i]),"processed_length":int(arrays["test"][2][i]),"text":test_texts[i],"error_type":"","observation":"","testable_fix":""})
     pd.DataFrame(rows20).to_csv(out/"outputs/manual_20_error_review.csv",index=False); print("Completed outputs in",out)
 if __name__=="__main__": main()
