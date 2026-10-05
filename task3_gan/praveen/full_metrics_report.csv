@@ -1,0 +1,15 @@
+direction,metric,value,status,notes
+A2B,FID,98.329445,local_validation,Replace with official evaluator value if rerun
+B2A,FID,92.867265,local_validation,Replace with official evaluator value if rerun
+A2B,KID,,pending,Compute with class-approved evaluator
+B2A,KID,,pending,Compute with class-approved evaluator
+A2B,generative_precision,,pending,Compute with class-approved evaluator
+B2A,generative_precision,,pending,Compute with class-approved evaluator
+A2B,generative_recall,,pending,Compute with class-approved evaluator
+B2A,generative_recall,,pending,Compute with class-approved evaluator
+A2B,LPIPS,,pending,Compute with class-approved evaluator
+B2A,LPIPS,,pending,Compute with class-approved evaluator
+A2B,cycle_L1,,pending,Report from held-out evaluation
+B2A,cycle_L1,,pending,Report from held-out evaluation
+A2B,content_cosine,,pending,Report from held-out evaluation
+B2A,content_cosine,,pending,Report from held-out evaluation

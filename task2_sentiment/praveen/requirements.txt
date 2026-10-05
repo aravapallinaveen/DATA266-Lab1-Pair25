@@ -1,0 +1,6 @@
+datasets>=2.20
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+scipy>=1.13
+tqdm>=4.66
