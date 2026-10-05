@@ -1,15 +1,25 @@
 direction,metric,value,status,notes
-A2B,FID,98.329445,local_validation,Replace with official evaluator value if rerun
-B2A,FID,92.867265,local_validation,Replace with official evaluator value if rerun
-A2B,KID,,pending,Compute with class-approved evaluator
-B2A,KID,,pending,Compute with class-approved evaluator
-A2B,generative_precision,,pending,Compute with class-approved evaluator
-B2A,generative_precision,,pending,Compute with class-approved evaluator
-A2B,generative_recall,,pending,Compute with class-approved evaluator
-B2A,generative_recall,,pending,Compute with class-approved evaluator
-A2B,LPIPS,,pending,Compute with class-approved evaluator
-B2A,LPIPS,,pending,Compute with class-approved evaluator
-A2B,cycle_L1,,pending,Report from held-out evaluation
-B2A,cycle_L1,,pending,Report from held-out evaluation
-A2B,content_cosine,,pending,Report from held-out evaluation
-B2A,content_cosine,,pending,Report from held-out evaluation
+A2B,FID,98.329445,local_validation,Computed by local evaluator; replace with official value if required
+B2A,FID,92.867265,local_validation,Computed by local evaluator; replace with official value if required
+A2B,KID,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,KID,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,generative_precision,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,generative_precision,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,generative_recall,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,generative_recall,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,LPIPS,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,LPIPS,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,cycle_L1,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,cycle_L1,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,content_cosine,0.8229490374028683,local_validation,Mean content cosine over 300 generated images
+B2A,content_cosine,0.7893867940171118,local_validation,Mean content cosine over 7038 generated images
+A2B,human_style,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,human_content,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,human_artifacts,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,human_kappa,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,kaggle_score,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,human_style,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,human_content,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,human_artifacts,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,human_kappa,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,kaggle_score,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
