@@ -1,16 +1,16 @@
 direction,metric,value,status,notes
 A2B,FID,98.329445,local_validation,Computed by local evaluator; replace with official value if required
 B2A,FID,92.867265,local_validation,Computed by local evaluator; replace with official value if required
-A2B,KID,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,KID,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,generative_precision,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,generative_precision,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,generative_recall,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,generative_recall,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,LPIPS,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,LPIPS,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,cycle_L1,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,cycle_L1,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,KID,0.03748513,local_validation,torch-fidelity; KID subset size 300
+B2A,KID,0.02038537,local_validation,torch-fidelity; KID subset size 300
+A2B,generative_precision,0.5333334,local_validation,torch-fidelity precision-recall evaluation
+B2A,generative_precision,0.4882069,local_validation,torch-fidelity precision-recall evaluation
+A2B,generative_recall,0.05186132,local_validation,torch-fidelity precision-recall evaluation
+B2A,generative_recall,0.2033333,local_validation,torch-fidelity precision-recall evaluation
+A2B,LPIPS,0.5987340883,local_validation,AlexNet LPIPS over 300 cycle-matched pairs
+B2A,LPIPS,0.5371447551,local_validation,AlexNet LPIPS over 7038 cycle-matched pairs
+A2B,cycle_L1,0.1270441223,local_validation,Mean pixel L1 over 300 cycle-matched pairs
+B2A,cycle_L1,0.1363788804,local_validation,Mean pixel L1 over 7038 cycle-matched pairs
 A2B,content_cosine,0.8229490374028683,local_validation,Mean content cosine over 300 generated images
 B2A,content_cosine,0.7893867940171118,local_validation,Mean content cosine over 7038 generated images
 A2B,human_style,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
