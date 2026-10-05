@@ -1,0 +1,3 @@
+comparison,b,c,p_value
+experimental_bilstm_attention,767,804,0.3637406857415711
+experimental_bigru_pool,961,780,1.5774880728971915e-05
