@@ -1,4 +1,4 @@
-# Task 2 — Praveen SID 8511
+﻿# Task 2 â€” Praveen SID 8511
 
 ## Overview
 
@@ -72,10 +72,11 @@ The implementation is in `src/train_praveen.py`. This report and the executed no
 
 ## Exact Task 2 hardware
 
-- CPU: PASTE EXACT CPU MODEL HERE
-- GPU: PASTE EXACT GPU MODEL HERE
+- CPU: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+- GPU: NVIDIA GeForce RTX 2060; Intel(R) UHD Graphics
 - Random seed: 8511
 - Original raw log: `training_raw.log`
 - Reproducibility copy: `reproducibility/raw_logs/task2_praveen_training_raw.log`
 
 The reproducibility copy is identical to the original raw log. No retraining was performed for documentation.
+
