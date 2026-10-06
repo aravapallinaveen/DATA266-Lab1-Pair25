@@ -1,8 +1,14 @@
-Original source path: C:\Users\naveen\Desktop\task3_gan\naveen\checkpoints_repro\repro_20261002T030447909094Z_57cacd34\epoch_150.pt
-Final clean path: C:\Users\naveen\Desktop\DATA266_Task3_Clean\task3_gan\naveen\checkpoints\epoch_150.pt
-Portable path: task3_gan/naveen/checkpoints/epoch_150.pt
+Task 3 checkpoint manifest
+
+Student: Naveen Aravapalli
+Checkpoint file: epoch_150.pt
+Submission package path:
+task3_gan/naveen/checkpoints/epoch_150.pt
+
 epoch = 150
 global_step = 45000
 seed = 171
+
 SHA256 = 9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152
-File bytes preserved exactly. Metadata checked against existing inference/evaluation provenance.
+
+The checkpoint bytes were preserved from the evaluated model and the metadata was checked against the existing evaluation provenance.
