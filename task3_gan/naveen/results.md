@@ -110,8 +110,53 @@ PENDING final leaderboard score/rank
 
 ## Human audit
 
-PENDING 30-image blinded audit with two raters
+A blinded human evaluation was conducted on 30 fixed CycleGAN translations:
+15 Monet→Photo (A2B) and 15 Photo→Monet (B2A).
+
+Two independent human raters evaluated each translation using a 1–5 scale
+for target-style quality, content preservation, and artifact quality.
+Higher scores indicate better performance.
+
+| Human evaluation metric | Result |
+|---|---:|
+| Style quality | 3.667 / 5 |
+| Content preservation | 4.033 / 5 |
+| Artifact quality | 3.433 / 5 |
+| Overall human audit score | 3.711 / 5 |
+| Style weighted Cohen's kappa | 0.671 |
+| Content weighted Cohen's kappa | 0.742 |
+| Artifact weighted Cohen's kappa | 0.610 |
+| Mean weighted Cohen's kappa | 0.674 |
+| Mean exact agreement | 57.78% |
+
+The human evaluation showed that content preservation was the strongest
+dimension, while artifact quality received the lowest mean score.
+Monet→Photo translations were rated higher than Photo→Monet translations
+across style, content preservation, and artifact quality.
+
+Evidence:
+`outputs/human_audit/human_audit_30_samples_completed.csv`,
+`outputs/human_audit/human_audit_summary.csv`,
+`outputs/human_audit/human_audit_by_direction.csv`.
 
 ## Analysis
 
-PENDING — student-authored interpretation
+The epoch-150 CycleGAN achieved better distribution-level performance in the
+B2A direction by FID, while the human audit favored A2B translations across
+all three qualitative dimensions.
+
+A2B achieved higher generative precision but lower recall, suggesting that
+its outputs were concentrated in a narrower but relatively realistic region
+of the target Photo distribution. B2A showed the opposite pattern, with
+greater coverage but lower precision.
+
+Content preservation was the strongest human-rated dimension at 4.033/5,
+while artifact quality was the weakest at 3.433/5. The overall human audit
+score was 3.711/5. Inter-rater reliability was reasonably consistent, with
+a mean quadratic-weighted Cohen's kappa of 0.674.
+
+The main limitation is maintaining clean target-style appearance without
+introducing visible translation artifacts. Future work could test replay
+buffers, alternative upsampling strategies, discriminator regularization,
+and checkpoint selection using both quantitative metrics and fixed-sample
+human evaluation.
