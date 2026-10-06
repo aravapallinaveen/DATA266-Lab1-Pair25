@@ -1,9 +1,27 @@
-# Task 3 - Praveen
+# Task 3 - CycleGAN Style Transfer
 
-Run the implementation from `praveen/src`. The data directory is intentionally not committed; provide it through `--data-root`.
+This folder contains the independent Task 3 CycleGAN implementations for Pair 25.
 
-```bash
-python src/train.py --config src/config.json --data-root /path/to/data --device cuda
-```
+## Members
 
-See `praveen/results.md` for the evidence still required after the official GPU run.
+- Naveen: `naveen/`
+- Praveen: `praveen/`
+
+Each member folder contains that member's implementation, evaluation outputs, metrics, and results summary.
+
+The raw Monet/Photo dataset is not committed.
+
+Final results:
+
+- `naveen/results.md`
+- `praveen/results.md`
+
+Naveen human-audit evidence:
+
+- `naveen/outputs/human_audit/`
+
+Praveen human-audit evidence:
+
+- `praveen/outputs/`
+
+Each member used an independently configured CycleGAN.
