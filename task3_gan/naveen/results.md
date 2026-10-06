@@ -105,8 +105,9 @@ compatibility. Recorded global/final supplemental SciPy was 1.18.1.
 Full environment evidence is preserved in the manifests.
 
 ## Kaggle
-
-PENDING final leaderboard score/rank
+Team: PairProgramming_Team_25
+Rank: 48
+Best displayed score: -54.0503
 
 ## Human audit
 
