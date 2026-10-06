@@ -1,0 +1,18 @@
+{
+  "all_numeric_metrics_finite": true,
+  "NaN_count_in_metrics": 0,
+  "Inf_count_in_metrics": 0,
+  "sample_count_each_set": 300,
+  "cycle_count_each_domain": 300,
+  "generated_prediction_files_unchanged": true,
+  "epoch100_folders_unchanged": true,
+  "epoch150_official_evidence_unchanged": true,
+  "raw_training_logs_unchanged": true,
+  "checkpoint_unchanged": true,
+  "main_notebook_unchanged_before_authorized_append": true,
+  "CSVs_parse": true,
+  "plots_readable": true,
+  "no_training": true,
+  "no_deleted_existing_files": true,
+  "no_zip_created": true
+}

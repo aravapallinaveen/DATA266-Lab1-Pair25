@@ -1,0 +1,8 @@
+[
+  "naveen/outputs_repro/final_metrics_epoch150/plots/generator_total.png",
+  "naveen/outputs_repro/final_metrics_epoch150/plots/discriminators.png",
+  "naveen/outputs_repro/final_metrics_epoch150/plots/cycle.png",
+  "naveen/outputs_repro/final_metrics_epoch150/plots/identity.png",
+  "naveen/outputs_repro/final_metrics_epoch150/plots/gradient_norms.png",
+  "naveen/outputs_repro/final_metrics_epoch150/plots/learning_rate.png"
+]

@@ -1,0 +1,412 @@
+[
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 1,
+    "excerpt": " DATA266 Lab1 Fall 2026 \n LLM Pretraining \u00b7 Sentiment Classification \u00b7 CycleGAN Style Transfer \n Objective: This lab simulates how AI teams work in industry \u2014 individuals build and experiment \n independently, then the team synthesizes results, agrees on shared evaluation, and ships one \n collaborative report. Use it to learn both the technical work and the teamwork. "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 1,
+    "excerpt": " collaborative report. Use it to learn both the technical work and the teamwork. \n All resource links (quick reference):  TinyStories  dataset  |  TinyStories paper  |  Attention Is All  You Need \n |  yelp polarity  |  NLP Sentiment  Classification  |  Kaggle competition signup  |  CycleGAN paper \n Before you start:  confirm your exact deadline and  team size/grouping on Canvas \u2014 this document \n covers what to do and how it's graded. \n 1. General Submission Instructions (Team) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 2,
+    "excerpt": " Task 1 \u2014 LLM from Scratch  15  15  30 \n Task 2 \u2014 Sentiment Classification  15  15  30 \n Task 3 \u2014 CycleGAN (+ Kaggle \n leaderboard bonus)  15  15  30 (+10) \n Reproducibility & Professional Practice  0  5  5 \n Demo/Viva \u2014 Individual scored  5  0  5 "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 5,
+    "excerpt": " 6.  Include each member's failure/error analysis (Task 1 failure cases, Task 2 error review) with the \n actual text/image snippets attached. \n 7.  Cite the papers referenced in the brief (Attention Is All You Need, TinyStories, CycleGAN). \n 8.  Push the report to the repo before the deadline. \n 7. Pre-Submission Checklist \n \u25cf  Every member's folder exists under all 3 task folders with code, config, logs, and results.md "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 5,
+    "excerpt": " \u25cf  Task 2: no pretrained embeddings or pretrained LMs used; all 3 models trained per member \n \u25cf  All required metrics reported for every model, every member (Tasks 1\u20133) \n \u25cf  Task 3 Kaggle submission made and leaderboard rank recorded \n \u25cf  Comparison tables (architecture + hyperparameters + metrics) present in the report for all 3 \n tasks \n \u25cf  Raw logs and manifests committed and untouched since the run "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " Metrics \n \u25cf  Accuracy \n \u25cf  Precision, Recall, F1-score (macro, micro, and weighted) \n \u25cf  Confusion matrix \n \u25cf  ROC-AUC \n \u25cf  PR-AUC "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " \u25cf  Parameter count, training time, and examples/sec \n \u25cf  Peak memory usage \n Task 3  CycleGAN Image Style Transfer \n Your Role: Generative Modeling Researcher, Computer Vision Team \n Your team is entering a shared Kaggle competition to build unpaired image-to-image translation \u2014 \n the technique behind production style-transfer and domain-adaptation pipelines. Each member "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " Your team is entering a shared Kaggle competition to build unpaired image-to-image translation \u2014 \n the technique behind production style-transfer and domain-adaptation pipelines. Each member \n trains their own CycleGAN; the team's leaderboard standing and analysis depend on comparing \n results and diagnosing issues together. \n Resources:  Kaggle Class Competition signup  |  CycleGAN paper "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " trains their own CycleGAN; the team's leaderboard standing and analysis depend on comparing \n results and diagnosing issues together. \n Resources:  Kaggle Class Competition signup  |  CycleGAN paper "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 3.1 Model Implementation and Training (20 Marks) \n 1.  Prepare two unpaired image domains from the dataset. \n 2.  Implement a CycleGAN architecture consisting of two generators and two discriminators. \n 3.  Train the model using adversarial loss and cycle-consistency loss. \n 4.  Perform image translation between the two domains. \n 5.  Analyse training behaviour, including convergence and stability. "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 1.  Prepare two unpaired image domains from the dataset. \n 2.  Implement a CycleGAN architecture consisting of two generators and two discriminators. \n 3.  Train the model using adversarial loss and cycle-consistency loss. \n 4.  Perform image translation between the two domains. \n 5.  Analyse training behaviour, including convergence and stability. \n 3.2 Evaluation and Analysis (10 Marks) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 3.2 Evaluation and Analysis (10 Marks) \n 1.  Assess the visual quality of your translated images. \n 2.  Verify correct implementation of the cycle-consistency constraints. \n 3.  Analyse training stability and loss behaviour. \n 4.  Discuss the quality of your analysis, observations, and any shortcomings. \n 5.  Submit predictions to the Kaggle Class Competition under your team and record your leaderboard "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 5.  Submit predictions to the Kaggle Class Competition under your team and record your leaderboard \n rank. \n 6.  Participate in a blinded human audit of 30 fixed samples (style, content, artifacts) with 2 raters, and \n report inter-rater agreement. \n Leaderboard integrity \u2014 read before submitting to Kaggle: \n Your submission must be the direct output of your own trained CycleGAN \u2014 no manually edited, "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " report inter-rater agreement. \n Leaderboard integrity \u2014 read before submitting to Kaggle: \n Your submission must be the direct output of your own trained CycleGAN \u2014 no manually edited, \n hand-picked, copied, or externally-sourced images, no hardcoded or lookup-table outputs, no \n training on or peeking at test-set pairings, and no pretrained/foundation image models used to \n generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " training on or peeking at test-set pairings, and no pretrained/foundation image models used to \n generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a \n working model \u2014 a high rank achieved by any means other than your own CycleGAN's inference will \n be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a \n working model \u2014 a high rank achieved by any means other than your own CycleGAN's inference will \n be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values \n \u25cf  Gradient norms / NaN count (training stability) "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values \n \u25cf  Gradient norms / NaN count (training stability) \n \u25cf  Human audit score and inter-rater agreement (Cohen's kappa or % agreement) \n \u25cf  Parameter count, training time, images/sec, and peak memory "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 10,
+    "excerpt": " \u2502    \u251c\u2500\u2500  src/ \n \u2502    \u2502    \u251c\u2500\u2500  code ipynb file \n \u2502    \u2502    \u2514\u2500\u2500  full metrics file   \u2190  KID, precision/recall, LPIPS, etc. \n \u2502    \u251c\u2500\u2500  checkpoints/ \n \u2502    \u251c\u2500\u2500  outputs/ \n \u2502    \u2502    \u251c\u2500\u2500  pred_A2B/ "
+  },
+  {
+    "file": "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "page": 11,
+    "excerpt": " report) \n \u2514\u2500\u2500  member_B_name/ \n \u2514\u2500\u2500  (identical structure, independent content) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 1,
+    "excerpt": " DATA266 Lab1 Fall 2026 \n LLM Pretraining \u00b7 Sentiment Classification \u00b7 CycleGAN Style Transfer \n Objective: This lab simulates how AI teams work in industry \u2014 individuals build and experiment \n independently, then the team synthesizes results, agrees on shared evaluation, and ships one \n collaborative report. Use it to learn both the technical work and the teamwork. "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 1,
+    "excerpt": " collaborative report. Use it to learn both the technical work and the teamwork. \n All resource links (quick reference):  TinyStories  dataset  |  TinyStories paper  |  Attention Is All  You Need \n |  yelp polarity  |  NLP Sentiment  Classification  |  Kaggle competition signup  |  CycleGAN paper \n Before you start:  confirm your exact deadline and  team size/grouping on Canvas \u2014 this document \n covers what to do and how it's graded. \n 1. General Submission Instructions (Team) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 2,
+    "excerpt": " Task 1 \u2014 LLM from Scratch  15  15  30 \n Task 2 \u2014 Sentiment Classification  15  15  30 \n Task 3 \u2014 CycleGAN (+ Kaggle \n leaderboard bonus)  15  15  30 (+10) \n Reproducibility & Professional Practice  0  5  5 \n Demo/Viva \u2014 Individual scored  5  0  5 "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 5,
+    "excerpt": " 6.  Include each member's failure/error analysis (Task 1 failure cases, Task 2 error review) with the \n actual text/image snippets attached. \n 7.  Cite the papers referenced in the brief (Attention Is All You Need, TinyStories, CycleGAN). \n 8.  Push the report to the repo before the deadline. \n 7. Pre-Submission Checklist \n \u25cf  Every member's folder exists under all 3 task folders with code, config, logs, and results.md "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 5,
+    "excerpt": " \u25cf  Task 2: no pretrained embeddings or pretrained LMs used; all 3 models trained per member \n \u25cf  All required metrics reported for every model, every member (Tasks 1\u20133) \n \u25cf  Task 3 Kaggle submission made and leaderboard rank recorded \n \u25cf  Comparison tables (architecture + hyperparameters + metrics) present in the report for all 3 \n tasks \n \u25cf  Raw logs and manifests committed and untouched since the run "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " Metrics \n \u25cf  Accuracy \n \u25cf  Precision, Recall, F1-score (macro, micro, and weighted) \n \u25cf  Confusion matrix \n \u25cf  ROC-AUC \n \u25cf  PR-AUC "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " \u25cf  Parameter count, training time, and examples/sec \n \u25cf  Peak memory usage \n Task 3  CycleGAN Image Style Transfer \n Your Role: Generative Modeling Researcher, Computer Vision Team \n Your team is entering a shared Kaggle competition to build unpaired image-to-image translation \u2014 \n the technique behind production style-transfer and domain-adaptation pipelines. Each member "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " Your team is entering a shared Kaggle competition to build unpaired image-to-image translation \u2014 \n the technique behind production style-transfer and domain-adaptation pipelines. Each member \n trains their own CycleGAN; the team's leaderboard standing and analysis depend on comparing \n results and diagnosing issues together. \n Resources:  Kaggle Class Competition signup  |  CycleGAN paper "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 8,
+    "excerpt": " trains their own CycleGAN; the team's leaderboard standing and analysis depend on comparing \n results and diagnosing issues together. \n Resources:  Kaggle Class Competition signup  |  CycleGAN paper "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 3.1 Model Implementation and Training (20 Marks) \n 1.  Prepare two unpaired image domains from the dataset. \n 2.  Implement a CycleGAN architecture consisting of two generators and two discriminators. \n 3.  Train the model using adversarial loss and cycle-consistency loss. \n 4.  Perform image translation between the two domains. \n 5.  Analyse training behaviour, including convergence and stability. "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 1.  Prepare two unpaired image domains from the dataset. \n 2.  Implement a CycleGAN architecture consisting of two generators and two discriminators. \n 3.  Train the model using adversarial loss and cycle-consistency loss. \n 4.  Perform image translation between the two domains. \n 5.  Analyse training behaviour, including convergence and stability. \n 3.2 Evaluation and Analysis (10 Marks) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 3.2 Evaluation and Analysis (10 Marks) \n 1.  Assess the visual quality of your translated images. \n 2.  Verify correct implementation of the cycle-consistency constraints. \n 3.  Analyse training stability and loss behaviour. \n 4.  Discuss the quality of your analysis, observations, and any shortcomings. \n 5.  Submit predictions to the Kaggle Class Competition under your team and record your leaderboard "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " 5.  Submit predictions to the Kaggle Class Competition under your team and record your leaderboard \n rank. \n 6.  Participate in a blinded human audit of 30 fixed samples (style, content, artifacts) with 2 raters, and \n report inter-rater agreement. \n Leaderboard integrity \u2014 read before submitting to Kaggle: \n Your submission must be the direct output of your own trained CycleGAN \u2014 no manually edited, "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " report inter-rater agreement. \n Leaderboard integrity \u2014 read before submitting to Kaggle: \n Your submission must be the direct output of your own trained CycleGAN \u2014 no manually edited, \n hand-picked, copied, or externally-sourced images, no hardcoded or lookup-table outputs, no \n training on or peeking at test-set pairings, and no pretrained/foundation image models used to \n generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " training on or peeking at test-set pairings, and no pretrained/foundation image models used to \n generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a \n working model \u2014 a high rank achieved by any means other than your own CycleGAN's inference will \n be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " generate or touch the submitted images. Leaderboard rank earns marks only as evidence of a \n working model \u2014 a high rank achieved by any means other than your own CycleGAN's inference will \n be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " be treated as an academic integrity violation and scored as zero for Task 3, regardless of reported \n metrics. \n Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " Task 3 \u2014 Evaluation Metrics (report all, both directions) \n \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  FID (Fr\u00e9chet Inception Distance), both directions \n \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  KID (Kernel Inception Distance), both directions \n \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Generative precision and recall (or density/coverage) \n \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Cycle-reconstruction L1 distance \n \u25cf  LPIPS (perceptual similarity) \n \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values \n \u25cf  Gradient norms / NaN count (training stability) "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 9,
+    "excerpt": " \u25cf  Content-preservation cosine similarity (input vs. translation) \n \u25cf  Generator and discriminator loss curves \n \u25cf  Cycle-consistency and identity loss values \n \u25cf  Gradient norms / NaN count (training stability) \n \u25cf  Human audit score and inter-rater agreement (Cohen's kappa or % agreement) \n \u25cf  Parameter count, training time, images/sec, and peak memory "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 10,
+    "excerpt": " \u2502    \u251c\u2500\u2500  src/ \n \u2502    \u2502    \u251c\u2500\u2500  code ipynb file \n \u2502    \u2502    \u2514\u2500\u2500  full metrics file   \u2190  KID, precision/recall, LPIPS, etc. \n \u2502    \u251c\u2500\u2500  checkpoints/ \n \u2502    \u251c\u2500\u2500  outputs/ \n \u2502    \u2502    \u251c\u2500\u2500  pred_A2B/ "
+  },
+  {
+    "file": "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "page": 11,
+    "excerpt": " report) \n \u2514\u2500\u2500  member_B_name/ \n \u2514\u2500\u2500  (identical structure, independent content) "
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 1,
+    "excerpt": "G_A2B\nG_B2A\nCycleGAN: Input, Output\nand the Full Cycle Process\nA visual, reproducible guide built around your DATA 266 Task 3 configuration\nResNet-9 generators  |  70x70 PatchGAN  |  LSGAN  |  Cycle + Identity losses"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 1,
+    "excerpt": "G_B2A\nCycleGAN: Input, Output\nand the Full Cycle Process\nA visual, reproducible guide built around your DATA 266 Task 3 configuration\nResNet-9 generators  |  70x70 PatchGAN  |  LSGAN  |  Cycle + Identity losses\n300"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 1,
+    "excerpt": "CycleGAN: Input, Output\nand the Full Cycle Process\nA visual, reproducible guide built around your DATA 266 Task 3 configuration\nResNet-9 generators  |  70x70 PatchGAN  |  LSGAN  |  Cycle + Identity losses\n300\nMonet images"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 1,
+    "excerpt": "and the Full Cycle Process\nA visual, reproducible guide built around your DATA 266 Task 3 configuration\nResNet-9 generators  |  70x70 PatchGAN  |  LSGAN  |  Cycle + Identity losses\n300\nMonet images\n7,038"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 2,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 2\n1. What enters one training batch?\nYour CycleGAN uses batch size = 1 per domain. So each training iteration begins with exactly one Monet"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 2,
+    "excerpt": "Page 2\n1. What enters one training batch?\nYour CycleGAN uses batch size = 1 per domain. So each training iteration begins with exactly one Monet\nimage and one Photo image.\nQuantity\nYour setup"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 2,
+    "excerpt": "ONE TRAINING STEP\n 1 batch = 1 iteration\nThe batch starts with 2 real images, but the cycle creates several generated/reconstructed tensors.\nIn one iteration the model creates fake translations, cycle reconstructions, identity outputs, discriminator\npredictions, and then updates the generators and discriminators.\nRemember: 1 batch = 1 Monet + 1 Photo. With batch size 1, 1 batch = 1 iteration = 1 training step."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 2,
+    "excerpt": " 1 batch = 1 iteration\nThe batch starts with 2 real images, but the cycle creates several generated/reconstructed tensors.\nIn one iteration the model creates fake translations, cycle reconstructions, identity outputs, discriminator\npredictions, and then updates the generators and discriminators.\nRemember: 1 batch = 1 Monet + 1 Photo. With batch size 1, 1 batch = 1 iteration = 1 training step."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 3,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 3\n2. How the input passes through your generator\nBoth directions use the same ResNet-9 generator design. The generator changes style/domain while"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 4\n3. The CycleGAN cycle - the core idea\nCycle consistency prevents a generator from producing a plausible but unrelated image. The translation must be"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 4\n3. The CycleGAN cycle - the core idea\nCycle consistency prevents a generator from producing a plausible but unrelated image. The translation must be\nreversible enough to reconstruct the original content.\nREAL MONET A"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "Page 4\n3. The CycleGAN cycle - the core idea\nCycle consistency prevents a generator from producing a plausible but unrelated image. The translation must be\nreversible enough to reconstruct the original content.\nREAL MONET A\n real_A"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "3. The CycleGAN cycle - the core idea\nCycle consistency prevents a generator from producing a plausible but unrelated image. The translation must be\nreversible enough to reconstruct the original content.\nREAL MONET A\n real_A\nG_A2B"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "RECONSTRUCTED MONET\n reconstructed_A\nCycle A loss: L1(real_A, reconstructed_A) x 10\nREAL PHOTO B\n real_B\nG_B2A"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "RECONSTRUCTED PHOTO\n reconstructed_B\nCycle A: Monet -> fake Photo -> reconstructed Monet. The reconstructed Monet should be close to the original\nMonet.\nCycle B: Photo -> fake Monet -> reconstructed Photo. The reconstructed Photo should be close to the original\nPhoto."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "Cycle A: Monet -> fake Photo -> reconstructed Monet. The reconstructed Monet should be close to the original\nMonet.\nCycle B: Photo -> fake Monet -> reconstructed Photo. The reconstructed Photo should be close to the original\nPhoto.\nYour cycle weight is lambda_cycle = 10, so content preservation is strongly enforced."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 4,
+    "excerpt": "Cycle B: Photo -> fake Monet -> reconstructed Photo. The reconstructed Photo should be close to the original\nPhoto.\nYour cycle weight is lambda_cycle = 10, so content preservation is strongly enforced."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 5,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 5\n4. What the discriminators and identity loss do\nREAL MONET"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 5,
+    "excerpt": "real_A -> G_B2A -> identity_A\nMonet should remain approximately Monet\nYour identity weight is lambda_identity = 5. It discourages unnecessary color/content changes."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 6,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 6\n5. One complete training iteration\nA single training step performs both translation directions, both cycles, both identity passes, and discriminator"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 6,
+    "excerpt": "Page 6\n5. One complete training iteration\nA single training step performs both translation directions, both cycles, both identity passes, and discriminator\nupdates.\n#\nStage"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 6,
+    "excerpt": "fake_B = G_A2B(real_A); fake_A = G_B2A(real_B)\n3\nCycle reconstruction\nrecon_A = G_B2A(fake_B); recon_B = G_A2B(fake_A)\n4\nIdentity passes"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 6,
+    "excerpt": "5\nGenerator losses\nadversarial + cycle + identity\n6\nUpdate generators\nbackprop G_total"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 6,
+    "excerpt": "backprop D_A and D_B\nGenerator objective\nG_total = G_A2B_adv + G_B2A_adv + 10 x cycle_A_raw + 10 x cycle_B_raw + 5 x identity_A_raw + 5\nx identity_B_raw\nBecause you use LSGAN, the adversarial objective uses mean-squared error. Discriminators learn real -> 1 and\nfake -> 0; generators try to make fake outputs score like real images."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 7,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 7\n6. Epochs, batches, iterations and total image exposure\nIn your run, these words line up cleanly because batch size is 1 and your epoch is explicitly defined as 300"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 7,
+    "excerpt": "1 Monet + 1 Photo\n1 iteration / step\nOne full CycleGAN update using that batch\n1 epoch\n300 batches = 300 iterations\n10 epochs"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "DATA 266 Task 3 - CycleGAN Study Guide\nPage 8\n7. What happens at inference time?\nTraining needs all four networks. Final style generation is much simpler: for Photo -> Monet, only G_B2A is"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "JPG\n RGB\nmodel.eval() + torch.no_grad() -> direct CycleGAN output\nThe generated Tanh output is mapped back from [-1, 1] to display/image range and saved as a 256x256 RGB\nJPEG. No discriminator is needed for generation.\nViva memory anchors"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "What do discriminators do?\nJudge whether local patches look real or fake.\nWhy cycle loss?\nPreserves content by forcing A->B->A and B->A->B reconstruction.\nWhy identity loss?\nPrevents unnecessary changes when input is already in the target domain."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "Judge whether local patches look real or fake.\nWhy cycle loss?\nPreserves content by forcing A->B->A and B->A->B reconstruction.\nWhy identity loss?\nPrevents unnecessary changes when input is already in the target domain.\nWhy PatchGAN?"
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "Focuses on local texture/style realism.\nWhy ResNet generator?\nChanges style while retaining spatial/content structure.\nFinal Photo->Monet path?\nPhoto -> G_B2A -> Monet-style image.\nOne-line summary: Generators translate. Discriminators judge. Cycle loss preserves content."
+  },
+  {
+    "file": "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf",
+    "page": 8,
+    "excerpt": "Final Photo->Monet path?\nPhoto -> G_B2A -> Monet-style image.\nOne-line summary: Generators translate. Discriminators judge. Cycle loss preserves content.\nIdentity loss prevents unnecessary changes."
+  }
+]

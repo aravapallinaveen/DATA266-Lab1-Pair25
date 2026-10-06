@@ -1,0 +1,15 @@
+{
+  "notebook": "C:\\Users\\naveen\\Desktop\\task3_gan\\naveen\\src\\Task3_CycleGAN_Naveen_Repro.ipynb",
+  "before_sha256": "58bacf6dc655a0496717c7461ca89641979c9e87ad0f3152f89ce16780c9a751",
+  "after_sha256": "da445e9eb5d2071621bd4b1cae81916a099673852646016d28e54d64cfcfa574",
+  "previous_cells": 78,
+  "current_cells": 80,
+  "appended_markdown_cells": 1,
+  "appended_code_cells": 1,
+  "all_previous_cells_and_outputs_unchanged": true,
+  "executed_only_appended_csv_display_cell": true,
+  "training_cells_executed": false,
+  "additional_metric_evaluation": false,
+  "result_source": "C:\\Users\\naveen\\Desktop\\task3_gan\\naveen\\outputs_repro\\evaluation\\epoch_150\\metrics\\evaluation_results.csv",
+  "comparison_source": "C:\\Users\\naveen\\Desktop\\task3_gan\\naveen\\outputs_repro\\evaluation\\epoch_100\\metrics\\submission.csv"
+}

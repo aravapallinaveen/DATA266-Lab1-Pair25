@@ -1,0 +1,99 @@
+{
+  "status": "complete",
+  "evaluation_seconds": 182.8278380999982,
+  "cells": [
+    {
+      "cell": 2,
+      "seconds": 10.989640299987514,
+      "status": "ok"
+    },
+    {
+      "cell": 4,
+      "seconds": 101.52372420000029,
+      "status": "ok"
+    },
+    {
+      "cell": 6,
+      "seconds": 0.4722259000118356,
+      "status": "ok"
+    },
+    {
+      "cell": 8,
+      "seconds": 2.510145000007469,
+      "status": "ok"
+    },
+    {
+      "cell": 10,
+      "seconds": 0.0030980999872554094,
+      "status": "ok"
+    },
+    {
+      "cell": 11,
+      "seconds": 3.9563963999971747,
+      "status": "ok"
+    },
+    {
+      "cell": 13,
+      "seconds": 0.08696239997516386,
+      "status": "ok"
+    },
+    {
+      "cell": 15,
+      "seconds": 0.04741699999431148,
+      "status": "ok"
+    },
+    {
+      "cell": 17,
+      "seconds": 0.016881800023838878,
+      "status": "ok"
+    },
+    {
+      "cell": 19,
+      "seconds": 0.42796349999844097,
+      "status": "ok"
+    },
+    {
+      "cell": 21,
+      "seconds": 8.676956300012534,
+      "status": "ok"
+    },
+    {
+      "cell": 23,
+      "seconds": 0.0042474000074435025,
+      "status": "ok"
+    },
+    {
+      "cell": 25,
+      "seconds": 0.009076099988305941,
+      "status": "ok"
+    },
+    {
+      "cell": 27,
+      "seconds": 2.405688700004248,
+      "status": "ok"
+    },
+    {
+      "cell": 29,
+      "seconds": 0.020843800011789426,
+      "status": "ok"
+    },
+    {
+      "cell": 31,
+      "seconds": 51.423371100012446,
+      "status": "ok"
+    }
+  ],
+  "all_code_cells_executed": true,
+  "all_code_cells_have_visible_outputs": true,
+  "errors": [],
+  "no_training": true,
+  "no_prediction_regeneration": true,
+  "no_deleted_existing_files": true,
+  "no_zip_created": true,
+  "hashes": {
+    "naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt": "9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152",
+    "naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv": "769bdef623ec8ec0e2899ec2d7fed1afa87bda0faec74b7a60c1de9a77761c1e",
+    "naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv": "28aecd5f26ab15a91d7df6df70bca7d43f658f263b2e097a529998d4aa601b99",
+    "naveen/src/Task3_Final_Metrics_Epoch150.ipynb": "07adbedeabb7493971c0e34dd75c8198d19ba3d2dde8b6b65993480440feee59"
+  }
+}

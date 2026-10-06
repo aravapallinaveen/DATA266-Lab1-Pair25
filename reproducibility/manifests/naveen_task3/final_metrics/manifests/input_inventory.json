@@ -1,0 +1,42 @@
+{
+  "real_A": {
+    "count": 300,
+    "selected": 300,
+    "mode": "RGB",
+    "size": [
+      256,
+      256
+    ],
+    "folder": "data/monet_jpg"
+  },
+  "real_B": {
+    "count": 7038,
+    "selected": 300,
+    "mode": "RGB",
+    "size": [
+      256,
+      256
+    ],
+    "folder": "data/photo_jpg"
+  },
+  "gen_A2B": {
+    "count": 300,
+    "selected": 300,
+    "mode": "RGB",
+    "size": [
+      256,
+      256
+    ],
+    "folder": "naveen/outputs_repro/evaluation/epoch_150/pred_A2B"
+  },
+  "gen_B2A": {
+    "count": 7038,
+    "selected": 300,
+    "mode": "RGB",
+    "size": [
+      256,
+      256
+    ],
+    "folder": "naveen/outputs_repro/evaluation/epoch_150/pred_B2A"
+  }
+}

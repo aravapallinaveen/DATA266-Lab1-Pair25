@@ -1,0 +1,42 @@
+{
+  "source_root": "C:\\Users\\naveen\\Desktop\\task3_gan",
+  "clean_root": "C:\\Users\\naveen\\Desktop\\DATA266_Task3_Clean\\task3_gan",
+  "mapping": [
+    {
+      "source": "naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt",
+      "clean": "naveen/checkpoints/epoch_150.pt"
+    },
+    {
+      "source": "naveen/outputs_repro/evaluation/epoch_150/pred_A2B",
+      "clean": "naveen/outputs/pred_A2B"
+    },
+    {
+      "source": "naveen/outputs_repro/evaluation/epoch_150/pred_B2A",
+      "clean": "naveen/outputs/pred_B2A"
+    },
+    {
+      "source": "naveen/logs_repro",
+      "clean": "reproducibility/raw_logs/naveen_task3"
+    },
+    {
+      "source": "naveen/outputs_repro/evaluation/epoch_150/metrics",
+      "clean": "reproducibility/manifests/naveen_task3/official_evaluation"
+    },
+    {
+      "source": "naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv",
+      "clean": "naveen/metrics_report.csv"
+    },
+    {
+      "source": "naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv",
+      "clean": "naveen/full_metrics_report.csv"
+    },
+    {
+      "source": "naveen/outputs_repro/final_metrics_epoch150",
+      "clean": "reproducibility/manifests/naveen_task3/final_metrics"
+    }
+  ],
+  "notebooks_and_helpers": "Byte-identical historical execution evidence; original paths retained in code and saved outputs.",
+  "portable_evaluator": "naveen/evaluate_local.py uses only clean project-relative inputs.",
+  "legacy_config": "config.py is the original seed-266 helper configuration; the final reproduction uses the self-contained notebook SEED=171 config.",
+  "this_task": "No training/inference/metric execution; wrapper package-verification checks only."
+}

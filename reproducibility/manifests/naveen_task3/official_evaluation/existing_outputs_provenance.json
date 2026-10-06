@@ -1,0 +1,21 @@
+{
+  "resolved_checkpoint": "naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt",
+  "checkpoint_sha256": "9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152",
+  "checkpoint_epoch": 150,
+  "global_step": 45000,
+  "seed": 171,
+  "sid4": 171,
+  "checkpoint_load_succeeded": true,
+  "checkpoint_unchanged": true,
+  "existing_outputs_only": true,
+  "images_regenerated": false,
+  "reused_official_predictions": false,
+  "counts": {
+    "real_monet": 300,
+    "real_photo": 7038,
+    "gen_A2B": 300,
+    "gen_B2A": 7038
+  },
+  "generated_images": 7338,
+  "provenance_source": "Existing executed reproduction notebook cells 69-73 load epoch 150 and generate direct eval/no_grad outputs; this task only verifies and evaluates existing files."
+}

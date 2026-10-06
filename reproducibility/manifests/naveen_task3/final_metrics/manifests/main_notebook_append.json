@@ -1,0 +1,12 @@
+{
+  "main_notebook": "naveen/src/Task3_CycleGAN_Naveen_Repro.ipynb",
+  "before_sha256": "da445e9eb5d2071621bd4b1cae81916a099673852646016d28e54d64cfcfa574",
+  "after_sha256": "c37dc932cc1bf0069331851fde20da6dca19081d8aa0cc2f2970ec49087da950",
+  "original_cell_count": 80,
+  "final_cell_count": 82,
+  "all_existing_cells_and_outputs_preserved": true,
+  "appended_cells": 2,
+  "only_new_saved_csv_summary_executed": true,
+  "training_cells_rerun": false,
+  "additional_metric_evaluation": false
+}

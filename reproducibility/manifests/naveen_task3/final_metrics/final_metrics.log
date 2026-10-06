@@ -1,0 +1,325 @@
+
+FINAL METRICS: executing evaluation cell 2
+Output: naveen/outputs_repro/final_metrics_epoch150 Device: cuda Seed: 171 Cap: 300
+
+FINAL METRICS: executing evaluation cell 4
+Verified real_A: 300 existing images; selected 300.
+Verified real_B: 2000/7038
+Verified real_B: 4000/7038
+Verified real_B: 6000/7038
+Verified real_B: 7038 existing images; selected 300.
+Verified gen_A2B: 300 existing images; selected 300.
+Verified gen_B2A: 2000/7038
+Verified gen_B2A: 4000/7038
+Verified gen_B2A: 6000/7038
+Verified gen_B2A: 7038 existing images; selected 300.
+Protected evidence hashes: 4000 files
+Protected evidence hashes: 8000 files
+Protected evidence hashes: 12000 files
+Protected evidence hashes: 16000 files
+Protected evidence hashes: 20000 files
+Checkpoint naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt: epoch 150, step 45000, seed 171.
+Verified complete epochs 1–150, existing official scores, parameter-count evidence, and immutable inputs.
+Checkpoint: naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt SHA256: 9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152
+History epochs: 150 Global step: 45000
+      FID_A2B  MiFID_A2B  ...  submission_FID  submission_MiFID
+0  109.489139   0.431104  ...      107.678501          0.422113
+
+[1 rows x 6 columns]
+
+FINAL METRICS: executing evaluation cell 6
+{
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "numpy": "2.5.2",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "lpips": "0.1.4",
+    "pypdf": "6.19.0",
+    "ipython": "9.17.1"
+  },
+  "cuda": "13.0",
+  "seed": 171,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "GPU_total_GiB": 23.98779296875,
+  "Inception": "torchvision Inception_V3_Weights.IMAGENET1K_V1; fc=Identity; 2048 pooled features",
+  "Inception_weights_sha256": "0cc3c7bd75056d25e46cba549dc184522069b81e9787eff6df84f397bd52a5ef",
+  "LPIPS": "lpips 0.1.4; net=alex; version=0.1; pretrained=True; pnet_rand=False; eval mode",
+  "AlexNet_weights_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+  "nvidia_driver": "610.60"
+}
+
+FINAL METRICS: executing evaluation cell 8
+{
+  "searched": [
+    "naveen/src",
+    "reference",
+    "../../Downloads/DATA266-Lab1-Pair25-main.zip",
+    "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf"
+  ],
+  "course_page": "DATA266_Lab1_Fall_2026.pdf, Task 3 metrics, page 9",
+  "reused_exactly": {
+    "feature_extraction": "Epoch-150 official instructor evaluator cell 5",
+    "generator": "naveen/src/models.py Generator",
+    "cycle_preprocessing": "naveen/src/dataset.py load_image(training=False)",
+    "parameters": "Existing executed step-18 notebook output",
+    "training": "Existing epochs CSV history"
+  },
+  "no_additional_course_algorithms_found": true,
+  "LPIPS_pairing": "Real input vs cycle reconstruction; no paired target protocol supplied",
+  "fallbacks": {
+    "KID": "Unbiased degree-3 polynomial MMD",
+    "precision_recall": "k=3 nearest-neighbor feature manifolds",
+    "content_cosine": "Input vs same-filename existing translation"
+  }
+}
+Checked KID against independent sklearn kernels, manifold self/disjoint fixtures and cosine identity; no training or image generation.
+
+FINAL METRICS: executing evaluation cell 10
+Exact instructor feature-extraction definitions loaded; no FID/MiFID computation.
+
+FINAL METRICS: executing evaluation cell 11
+Extracting features: real_A 300
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  10%|█         | 1/10 [00:00<00:02,  3.92it/s]Inception activations:  30%|███       | 3/10 [00:00<00:00,  7.76it/s]Inception activations:  50%|█████     | 5/10 [00:00<00:00,  9.73it/s]Inception activations:  70%|███████   | 7/10 [00:00<00:00, 10.48it/s]Inception activations:  90%|█████████ | 9/10 [00:00<00:00, 10.97it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 10.35it/s]
+Extracting features: real_B 300
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|██        | 2/10 [00:00<00:00, 12.00it/s]Inception activations:  40%|████      | 4/10 [00:00<00:00, 12.34it/s]Inception activations:  60%|██████    | 6/10 [00:00<00:00, 12.42it/s]Inception activations:  80%|████████  | 8/10 [00:00<00:00, 12.74it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 14.18it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 13.35it/s]
+Extracting features: gen_A2B 300
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|██        | 2/10 [00:00<00:00, 12.13it/s]Inception activations:  40%|████      | 4/10 [00:00<00:00, 12.05it/s]Inception activations:  60%|██████    | 6/10 [00:00<00:00, 12.55it/s]Inception activations:  80%|████████  | 8/10 [00:00<00:00, 12.64it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 13.94it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 13.21it/s]
+Extracting features: gen_B2A 300
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|██        | 2/10 [00:00<00:00, 12.51it/s]Inception activations:  40%|████      | 4/10 [00:00<00:00, 12.44it/s]Inception activations:  60%|██████    | 6/10 [00:00<00:00, 12.27it/s]Inception activations:  80%|████████  | 8/10 [00:00<00:00, 12.59it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 13.88it/s]Inception activations: 100%|██████████| 10/10 [00:00<00:00, 13.21it/s]
+{'real_A': (300, 2048), 'real_B': (300, 2048), 'gen_A2B': (300, 2048), 'gen_B2A': (300, 2048)}
+
+FINAL METRICS: executing evaluation cell 13
+         mean       std  subsets  subset_size   seed
+A2B  0.025089  0.002984    100.0        100.0  171.0
+B2A  0.010222  0.001563    100.0        100.0  171.0
+
+FINAL METRICS: executing evaluation cell 15
+     precision    recall    k  real_samples  generated_samples
+A2B   0.643333  0.300000  3.0         300.0              300.0
+B2A   0.350000  0.613333  3.0         300.0              300.0
+
+FINAL METRICS: executing evaluation cell 17
+         mean       std
+A2B  0.828442  0.075112
+B2A  0.782823  0.105200
+
+FINAL METRICS: executing evaluation cell 19
+C:\Users\naveen\miniconda3\envs\data266-task3\Lib\site-packages\torchvision\models\_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\naveen\miniconda3\envs\data266-task3\Lib\site-packages\torchvision\models\_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+LPIPS 0.1.4 AlexNet v0.1, eval/no_grad, 300/domain.
+
+FINAL METRICS: executing evaluation cell 21
+Cycle/LPIPS A: 50/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS A: 100/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS A: 150/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS A: 200/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS A: 250/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS A: 300/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 50/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 100/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 150/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 200/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 250/300; intermediate tensors only, no image files saved.
+Cycle/LPIPS B: 300/300; intermediate tensors only, no image files saved.
+Cycle samples: 300/domain; no translation/reconstruction image files saved.
+                         mean       std
+cycle_L1_0_1_A       0.051894  0.011177
+cycle_L1_minus1_1_A  0.103787  0.022354
+cycle_L1_0_1_B       0.066511  0.023245
+cycle_L1_minus1_1_B  0.133023  0.046490
+
+FINAL METRICS: executing evaluation cell 23
+Per-image evidence: naveen/outputs_repro/final_metrics_epoch150/cycle_lpips_per_image.csv
+       mean       std
+A  0.353153  0.103598
+B  0.305519  0.079379
+
+FINAL METRICS: executing evaluation cell 25
+Total parameters: 28285832 History: 150 epochs
+                             existing_epoch150_value
+epoch                                     150.000000
+global_step                             45000.000000
+learning_rate                               0.000100
+G_A2B_adv                                   0.545580
+G_B2A_adv                                   0.505027
+cycle_A                                     0.909164
+cycle_B                                     1.126727
+identity_A                                  0.464159
+identity_B                                  0.522441
+G_total                                     4.073098
+D_A                                         0.177033
+D_B                                         0.152763
+generator_gradient_norm                    23.903196
+discriminator_gradient_norm                 9.786860
+NaN_count                                   0.000000
+Inf_count                                   0.000000
+images_per_second                          16.807604
+epoch_seconds                              35.698127
+elapsed_minutes                            91.631370
+peak_gpu_memory_GB                          2.442583
+       existing_parameter_count
+G_A2B                  11378179
+G_B2A                  11378179
+D_A                     2764737
+D_B                     2764737
+
+FINAL METRICS: executing evaluation cell 27
+Saved six plots from complete logged epochs 1–150. Raw logs are unchanged.
+naveen/outputs_repro/final_metrics_epoch150/plots/generator_total.png
+naveen/outputs_repro/final_metrics_epoch150/plots/discriminators.png
+naveen/outputs_repro/final_metrics_epoch150/plots/cycle.png
+naveen/outputs_repro/final_metrics_epoch150/plots/identity.png
+naveen/outputs_repro/final_metrics_epoch150/plots/gradient_norms.png
+naveen/outputs_repro/final_metrics_epoch150/plots/learning_rate.png
+<IPython.core.display.Image object>
+<IPython.core.display.Image object>
+<IPython.core.display.Image object>
+<IPython.core.display.Image object>
+<IPython.core.display.Image object>
+<IPython.core.display.Image object>
+
+FINAL METRICS: executing evaluation cell 29
+Saved tidy metrics and long-form report; human audit/agreement and Kaggle remain PENDING.
+Saved factual evaluation_protocol.md with definitions, exact reuse, sample policy, versions and evidence paths.
+CSV evidence: naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv
+                                                                             value
+checkpoint                       naveen/checkpoints_repro/repro_20261002T030447...
+epoch                                                                          150
+global_step                                                                  45000
+FID_A2B                                                                 109.489139
+MiFID_A2B                                                                 0.431104
+FID_B2A                                                                 105.867864
+MiFID_B2A                                                                 0.413123
+submission_FID                                                          107.678501
+submission_MiFID                                                          0.422113
+KID_A2B_mean                                                              0.025089
+content_cosine_A2B_mean                                                   0.828442
+KID_A2B_std                                                               0.002984
+content_cosine_A2B_std                                                    0.075112
+generative_precision_A2B                                                  0.643333
+generative_recall_A2B                                                          0.3
+KID_B2A_mean                                                              0.010222
+content_cosine_B2A_mean                                                   0.782823
+KID_B2A_std                                                               0.001563
+content_cosine_B2A_std                                                      0.1052
+generative_precision_B2A                                                      0.35
+generative_recall_B2A                                                     0.613333
+cycle_L1_A_0_1                                                            0.051894
+cycle_L1_A_minus1_1                                                       0.103787
+LPIPS_A_mean                                                              0.353153
+LPIPS_A_std                                                               0.103598
+cycle_L1_B_0_1                                                            0.066511
+cycle_L1_B_minus1_1                                                       0.133023
+LPIPS_B_mean                                                              0.305519
+LPIPS_B_std                                                               0.079379
+G_total                                                                   4.073098
+D_A                                                                       0.177033
+D_B                                                                       0.152763
+generator_gradient_norm                                                  23.903196
+discriminator_gradient_norm                                                9.78686
+NaN_count                                                                      0.0
+Inf_count                                                                      0.0
+images_per_second                                                        16.807604
+peak_gpu_memory_GB                                                        2.442583
+learning_rate                                                               0.0001
+epoch_seconds                                                            35.698127
+cycle_loss_A                                                              0.909164
+cycle_loss_B                                                              1.126727
+identity_loss_A                                                           0.464159
+identity_loss_B                                                           0.522441
+parameter_count_G_A2B                                                     11378179
+parameter_count_G_B2A                                                     11378179
+parameter_count_D_A                                                        2764737
+parameter_count_D_B                                                        2764737
+parameter_count_total                                                     28285832
+training_time_minutes                                                     91.63137
+history_peak_gpu_memory_GiB                                               2.449586
+history_NaN_total                                                              0.0
+history_Inf_total                                                              0.0
+evaluation_sample_count_per_set                                                300
+                             metric  ...                                      evidence_file
+0                           FID_A2B  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+1                         MiFID_A2B  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+2                           FID_B2A  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+3                         MiFID_B2A  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+4                    submission_FID  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+5                  submission_MiFID  ...  naveen/outputs_repro/evaluation/epoch_150/metr...
+6                      KID_A2B_mean  ...  naveen/outputs_repro/final_metrics_epoch150/ki...
+7           content_cosine_A2B_mean  ...  naveen/outputs_repro/final_metrics_epoch150/co...
+8                       KID_A2B_std  ...  naveen/outputs_repro/final_metrics_epoch150/ki...
+9            content_cosine_A2B_std  ...  naveen/outputs_repro/final_metrics_epoch150/co...
+10         generative_precision_A2B  ...  naveen/outputs_repro/final_metrics_epoch150/pr...
+11            generative_recall_A2B  ...  naveen/outputs_repro/final_metrics_epoch150/pr...
+12                     KID_B2A_mean  ...  naveen/outputs_repro/final_metrics_epoch150/ki...
+13          content_cosine_B2A_mean  ...  naveen/outputs_repro/final_metrics_epoch150/co...
+14                      KID_B2A_std  ...  naveen/outputs_repro/final_metrics_epoch150/ki...
+15           content_cosine_B2A_std  ...  naveen/outputs_repro/final_metrics_epoch150/co...
+16         generative_precision_B2A  ...  naveen/outputs_repro/final_metrics_epoch150/pr...
+17            generative_recall_B2A  ...  naveen/outputs_repro/final_metrics_epoch150/pr...
+18                   cycle_L1_A_0_1  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+19              cycle_L1_A_minus1_1  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+20                     LPIPS_A_mean  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+21                      LPIPS_A_std  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+22                   cycle_L1_B_0_1  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+23              cycle_L1_B_minus1_1  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+24                     LPIPS_B_mean  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+25                      LPIPS_B_std  ...  naveen/outputs_repro/final_metrics_epoch150/cy...
+26                          G_total  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+27                              D_A  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+28                              D_B  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+29          generator_gradient_norm  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+30      discriminator_gradient_norm  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+31                        NaN_count  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+32                        Inf_count  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+33                images_per_second  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+34               peak_gpu_memory_GB  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+35                    learning_rate  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+36                    epoch_seconds  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+37                     cycle_loss_A  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+38                     cycle_loss_B  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+39                  identity_loss_A  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+40                  identity_loss_B  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+41            parameter_count_G_A2B  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+42            parameter_count_G_B2A  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+43              parameter_count_D_A  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+44              parameter_count_D_B  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+45            parameter_count_total  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+46            training_time_minutes  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+47      history_peak_gpu_memory_GiB  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+48                history_NaN_total  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+49                history_Inf_total  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+50  evaluation_sample_count_per_set  ...  naveen/outputs_repro/final_metrics_epoch150/ma...
+51                human_audit_score  ...                                            PENDING
+52            inter_rater_agreement  ...                                            PENDING
+53              Kaggle_public_score  ...                                            PENDING
+54             Kaggle_private_score  ...                                            PENDING
+55                      Kaggle_rank  ...                                            PENDING
+
+[56 rows x 7 columns]
+
+FINAL METRICS: executing evaluation cell 31
+Validation passed: finite metrics, exact samples, readable CSVs/plots, protected file hashes unchanged.
+9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152 naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt
+769bdef623ec8ec0e2899ec2d7fed1afa87bda0faec74b7a60c1de9a77761c1e naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv
+28aecd5f26ab15a91d7df6df70bca7d43f658f263b2e097a529998d4aa601b99 naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv
+Final notebook SHA256 is recorded by the executor after saving its executed outputs.
+Executed evidence notebook: naveen/src/Task3_Final_Metrics_Epoch150.ipynb
+Protocol: naveen/outputs_repro/final_metrics_epoch150/evaluation_protocol.md
+Errors: []
+
+COMPLETED FINAL METRICS
+{
+  "naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt": "9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152",
+  "naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv": "769bdef623ec8ec0e2899ec2d7fed1afa87bda0faec74b7a60c1de9a77761c1e",
+  "naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv": "28aecd5f26ab15a91d7df6df70bca7d43f658f263b2e097a529998d4aa601b99",
+  "naveen/src/Task3_Final_Metrics_Epoch150.ipynb": "07adbedeabb7493971c0e34dd75c8198d19ba3d2dde8b6b65993480440feee59"
+}

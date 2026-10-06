@@ -1,0 +1,34 @@
+{
+  "sample_count_per_domain": 300,
+  "results": {
+    "cycle_L1_0_1_A": {
+      "mean": 0.05189370443423589,
+      "std": 0.011176776847682736
+    },
+    "cycle_L1_minus1_1_A": {
+      "mean": 0.10378740911682446,
+      "std": 0.022353553005021776
+    },
+    "LPIPS_A": {
+      "mean": 0.3531525456905365,
+      "std": 0.10359809903306247
+    },
+    "cycle_L1_0_1_B": {
+      "mean": 0.06651143689950308,
+      "std": 0.023245184694231636
+    },
+    "cycle_L1_minus1_1_B": {
+      "mean": 0.13302287372450033,
+      "std": 0.046490369723243566
+    },
+    "LPIPS_B": {
+      "mean": 0.3055188757677873,
+      "std": 0.07937863311323239
+    }
+  },
+  "std_ddof": 0,
+  "tensor_range": "[-1,1]",
+  "cycle_L1_report_range": "[0,1]",
+  "translation_and_reconstruction": "In-memory tensors only; no prediction folders changed.",
+  "evaluation_seconds": 8.528865100000985
+}

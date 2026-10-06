@@ -1,0 +1,38 @@
+{
+  "epoch150_row": {
+    "epoch": 150.0,
+    "global_step": 45000.0,
+    "learning_rate": 0.0001,
+    "G_A2B_adv": 0.545580407405893,
+    "G_B2A_adv": 0.5050267071773609,
+    "cycle_A": 0.9091642324129741,
+    "cycle_B": 1.126726686557134,
+    "identity_A": 0.4641587800780932,
+    "identity_B": 0.5224410127600034,
+    "G_total": 4.073097843329112,
+    "D_A": 0.17703302518775066,
+    "D_B": 0.15276263527572154,
+    "generator_gradient_norm": 23.903195854822794,
+    "discriminator_gradient_norm": 9.786860245068867,
+    "NaN_count": 0.0,
+    "Inf_count": 0.0,
+    "images_per_second": 16.807604405639427,
+    "epoch_seconds": 35.698127200012095,
+    "elapsed_minutes": 91.63137033666717,
+    "peak_gpu_memory_GB": 2.442582607269287
+  },
+  "parameter_counts": {
+    "G_A2B": 11378179,
+    "G_B2A": 11378179,
+    "D_A": 2764737,
+    "D_B": 2764737
+  },
+  "parameter_evidence": "naveen/src/Task3_CycleGAN_Naveen_Repro.ipynb#step-18-existing-output",
+  "history_sources": [
+    "naveen/logs_repro/repro_20261002T030447909094Z_57cacd34/repro_20261002T030447918094Z_a8380e0d_epochs.csv",
+    "naveen/logs_repro/repro_20261002T030447909094Z_57cacd34/repro_20261002T051435723659Z_ca415a31_epochs.csv"
+  ],
+  "training_time_definition": "Exact elapsed_minutes at epoch 150, including logged elapsed run overhead.",
+  "throughput_definition": "Epoch-150 logged training images/sec: 600 input domain images / epoch_seconds.",
+  "memory_definition": "Epoch-150 logged max_memory_allocated / 1024^3; training, not metric extraction."
+}

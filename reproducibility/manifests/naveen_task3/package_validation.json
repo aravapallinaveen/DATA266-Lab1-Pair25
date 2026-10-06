@@ -1,0 +1,40 @@
+{
+  "validated_at_utc": "2026-10-02T07:43:42.615969+00:00",
+  "checkpoint_sha256": "9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152",
+  "pred_A2B": 300,
+  "pred_B2A": 7038,
+  "images": {
+    "resolution": [
+      256,
+      256
+    ],
+    "mode": "RGB",
+    "decoding_verified": true,
+    "filenames_match_inputs": true,
+    "byte_identical": true,
+    "format_counts": {
+      "A2B": {
+        "JPEG": 300
+      },
+      "B2A": {
+        "JPEG": 7038
+      }
+    }
+  },
+  "notebooks_valid_json_and_nbformat": true,
+  "notebook_outputs_preserved": true,
+  "all_csvs_parse": true,
+  "metrics_match_evidence": true,
+  "raw_logs": 6,
+  "plots": 6,
+  "sample_files": 9,
+  "wrapper_syntax_and_only_path_config_changes_verified": true,
+  "wrapper_metric_cells_executed": false,
+  "original_metadata_unchanged": true,
+  "forbidden_directories_absent": true,
+  "datasets_not_copied": true,
+  "training_started": false,
+  "inference_started": false,
+  "metrics_rerun": false,
+  "kaggle_submitted": false
+}

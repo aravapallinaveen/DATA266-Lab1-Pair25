@@ -1,0 +1,10 @@
+{
+  "packages_used_for_algorithm_checks_execution_and_validation": {
+    "scikit-learn": "1.9.1",
+    "tqdm": "4.70.1",
+    "nbformat": "5.11.1",
+    "traitlets": "5.16.1"
+  },
+  "OS": "Windows-11-10.0.22631-SP0",
+  "purpose": "Supplement the recorded metric-library and model versions; no metric recomputation."
+}

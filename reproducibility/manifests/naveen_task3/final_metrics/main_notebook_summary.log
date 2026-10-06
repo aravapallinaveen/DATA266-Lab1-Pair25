@@ -1,0 +1,54 @@
+============================================================
+FINAL EPOCH 150 — TASK 3 METRICS
+============================================================
+Checkpoint: naveen/checkpoints_repro/repro_20261002T030447909094Z_57cacd34/epoch_150.pt
+Epoch: 150 | Global step: 45000 | Seed: 171
+
+Official FID / MiFID
+FID_A2B                        : 109.48913912902457
+MiFID_A2B                      : 0.43110403418540955
+FID_B2A                        : 105.86786360611433
+MiFID_B2A                      : 0.41312262415885925
+Submission FID                 : 107.67850136756945
+Submission MiFID               : 0.4221133291721344
+
+Remaining automated metrics
+KID A2B                        : 0.025088945133143494 / 0.002984295586468944 (mean/std)
+KID B2A                        : 0.010222349777397022 / 0.0015632233408134943 (mean/std)
+Generative Precision A2B       : 0.6433333333333333
+Generative Recall A2B          : 0.3
+Generative Precision B2A       : 0.35
+Generative Recall B2A          : 0.6133333333333333
+Cycle L1 A [0,1]               : 0.05189370443423589
+Cycle L1 B [0,1]               : 0.06651143689950308
+LPIPS A                        : 0.3531525456905365 / 0.10359809903306247 (mean/std)
+LPIPS B                        : 0.3055188757677873 / 0.07937863311323239 (mean/std)
+Content Cosine A2B             : 0.8284416557570147 / 0.07511244998941267 (mean/std)
+Content Cosine B2A             : 0.7828227874722511 / 0.10520040518911024 (mean/std)
+
+Training stability — existing epoch-150 log
+G_total                        : 4.073097843329112
+D_A                            : 0.17703302518775066
+D_B                            : 0.15276263527572154
+Generator gradient norm        : 23.903195854822794
+Discriminator gradient norm    : 9.786860245068867
+NaN count                      : 0.0
+Inf count                      : 0.0
+
+Efficiency — existing training records
+Parameter count (four models)  : 28285832
+Training time (logged minutes) : 91.63137033666717
+Images/sec (epoch 150)         : 16.807604405639427
+Peak GPU GiB (epoch 150)       : 2.442582607269287
+Peak GPU GiB (entire history)  : 2.4495863914489746
+
+Still pending:
+- 30-image blinded human audit with two raters: PENDING
+- Cohen's kappa / percent agreement: PENDING
+- Final Kaggle public/private score and leaderboard rank: PENDING
+
+Evidence:
+naveen/outputs_repro/final_metrics_epoch150/automated_metrics_epoch150.csv
+naveen/outputs_repro/final_metrics_epoch150/full_metrics_report.csv
+naveen/src/Task3_Final_Metrics_Epoch150.ipynb
+============================================================

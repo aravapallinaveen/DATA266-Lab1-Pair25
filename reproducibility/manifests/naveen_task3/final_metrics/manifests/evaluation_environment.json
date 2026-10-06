@@ -1,0 +1,24 @@
+{
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "numpy": "2.5.2",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "lpips": "0.1.4",
+    "pypdf": "6.19.0",
+    "ipython": "9.17.1"
+  },
+  "cuda": "13.0",
+  "seed": 171,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "GPU_total_GiB": 23.98779296875,
+  "Inception": "torchvision Inception_V3_Weights.IMAGENET1K_V1; fc=Identity; 2048 pooled features",
+  "Inception_weights_sha256": "0cc3c7bd75056d25e46cba549dc184522069b81e9787eff6df84f397bd52a5ef",
+  "LPIPS": "lpips 0.1.4; net=alex; version=0.1; pretrained=True; pnet_rand=False; eval mode",
+  "AlexNet_weights_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+  "nvidia_driver": "610.60"
+}

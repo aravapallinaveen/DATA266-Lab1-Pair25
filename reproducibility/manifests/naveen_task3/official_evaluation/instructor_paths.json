@@ -1,0 +1,25 @@
+{
+  "new_download": "C:\\Users\\naveen\\Downloads\\Part3_Evaluation_Script (1).ipynb",
+  "new_download_sha256": "702a1265433bf2f15c7900c83442c626d10ac0918094d093dde8ef82069d4cef",
+  "epoch100_copy": "C:\\Users\\naveen\\Desktop\\task3_gan\\naveen\\outputs\\evaluation\\epoch_100\\metrics\\Part3_Evaluation_Script.ipynb",
+  "epoch100_copy_sha256": "3a0f1b1b4b7e1a9216ea8e2795ce23513ea84847ba4d00c853384c30c1a9a70b",
+  "files_identical": false,
+  "cell_source_differences": [
+    3
+  ],
+  "non_path_metric_cells_identical": true,
+  "evaluator_used": "C:\\Users\\naveen\\Desktop\\task3_gan\\naveen\\outputs_repro\\evaluation\\epoch_150\\metrics\\Part3_Evaluation_Script.ipynb",
+  "configured_evaluator_sha256": "8c0b6673e0b4290b330701b86b77baa0f6424782e58474cb4046eb90e3798044",
+  "original_copy_sha256": "702a1265433bf2f15c7900c83442c626d10ac0918094d093dde8ef82069d4cef",
+  "modified_cell": 3,
+  "changes": "Only BASE, GEN_A2B, GEN_B2A path assignment values.",
+  "metric_formulas_unchanged": true,
+  "metric_settings_unchanged": true,
+  "preprocessing_unchanged": true,
+  "N_EVAL": 300,
+  "BATCH_SIZE": 32,
+  "real_monet": "data/monet_jpg",
+  "real_photo": "data/photo_jpg",
+  "gen_A2B": "naveen/outputs_repro/evaluation/epoch_150/pred_A2B",
+  "gen_B2A": "naveen/outputs_repro/evaluation/epoch_150/pred_B2A"
+}

@@ -1,0 +1,43 @@
+{
+  "checkpoint": "naveen/checkpoints/epoch_150.pt",
+  "sha256": "9cc42d24ca52fd53d3ba1b690c92a5fb0fd4eb8a27dfd087f86e030a3ae24152",
+  "epoch": 150,
+  "global_step": 45000,
+  "seed": 171,
+  "official_metrics": {
+    "FID_A2B": 109.48913912902457,
+    "MiFID_A2B": 0.43110403418540955,
+    "FID_B2A": 105.86786360611433,
+    "MiFID_B2A": 0.41312262415885925,
+    "submission_FID": 107.67850136756945,
+    "submission_MiFID": 0.4221133291721344
+  },
+  "reports": [
+    "naveen/metrics_report.csv",
+    "naveen/full_metrics_report.csv"
+  ],
+  "official_evidence": "reproducibility/manifests/naveen_task3/official_evaluation",
+  "dataset_counts": {
+    "monet": 300,
+    "photo": 7038
+  },
+  "prediction_counts": {
+    "A2B": 300,
+    "B2A": 7038
+  },
+  "prediction_resolution": [
+    256,
+    256
+  ],
+  "prediction_mode": "RGB",
+  "actual_image_formats": {
+    "A2B": {
+      "JPEG": 300
+    },
+    "B2A": {
+      "JPEG": 7038
+    }
+  },
+  "instructor_samples_per_set": 300,
+  "images_regenerated": false
+}

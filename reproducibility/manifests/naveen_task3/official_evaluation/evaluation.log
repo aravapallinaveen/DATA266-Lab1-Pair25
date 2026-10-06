@@ -1,0 +1,32 @@
+Executing all instructor cells unchanged through IPython; reproduced epoch 150 only.
+Executing unchanged instructor cell 1
+Executing unchanged instructor cell 2
+Executing unchanged instructor cell 3
+Device: cuda
+Executing unchanged instructor cell 4
+Executing unchanged instructor cell 5
+Executing unchanged instructor cell 6
+Executing unchanged instructor cell 7
+Executing unchanged instructor cell 8
+
+Counts (after N_EVAL cap):
+Real Monet: 300  | Gen Monet (B2A): 300
+Real Photo: 300  | Gen Photo (A2B): 300
+Executing unchanged instructor cell 9
+
+ Evaluating Photo -> Monet (B2A) 
+[Photo->Monet] FID=105.868  MiFID=0.4131
+
+ Evaluating Monet -> Photo (A2B) 
+[Monet->Photo] FID=109.489  MiFID=0.4311
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  10%|#         | 1/10 [00:00<00:02,  4.01it/s]Inception activations:  30%|###       | 3/10 [00:00<00:00,  7.91it/s]Inception activations:  50%|#####     | 5/10 [00:00<00:00,  9.59it/s]Inception activations:  70%|#######   | 7/10 [00:00<00:00, 10.62it/s]Inception activations:  90%|######### | 9/10 [00:00<00:00, 11.40it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 10.66it/s]
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|##        | 2/10 [00:00<00:00, 12.63it/s]Inception activations:  40%|####      | 4/10 [00:00<00:00, 12.21it/s]Inception activations:  60%|######    | 6/10 [00:00<00:00, 11.90it/s]Inception activations:  80%|########  | 8/10 [00:00<00:00, 12.52it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 13.92it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 13.13it/s]
+<ipython-input-6-1c98f9e991e9>:2: DeprecationWarning: The `disp` argument is deprecated and will be removed in SciPy 1.18.0.
+  covmean, _ = scipy.linalg.sqrtm(sigma1.dot(sigma2), disp=False)
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|##        | 2/10 [00:00<00:00, 12.02it/s]Inception activations:  40%|####      | 4/10 [00:00<00:00, 12.05it/s]Inception activations:  60%|######    | 6/10 [00:00<00:00, 12.34it/s]Inception activations:  80%|########  | 8/10 [00:00<00:00, 12.36it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 14.17it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 13.24it/s]
+Inception activations:   0%|          | 0/10 [00:00<?, ?it/s]Inception activations:  20%|##        | 2/10 [00:00<00:00, 12.47it/s]Inception activations:  40%|####      | 4/10 [00:00<00:00, 12.86it/s]Inception activations:  60%|######    | 6/10 [00:00<00:00, 12.93it/s]Inception activations:  80%|########  | 8/10 [00:00<00:00, 13.04it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 14.50it/s]Inception activations: 100%|##########| 10/10 [00:00<00:00, 13.73it/s]
+Executing unchanged instructor cell 10
+   ID         FID     MiFID
+0   1  107.678501  0.422113
+COMPLETE: 22.784 evaluation seconds; all four sets used 300 images.
+{"FID_A2B": 109.48913912902457, "MiFID_A2B": 0.43110403418540955, "FID_B2A": 105.86786360611433, "MiFID_B2A": 0.41312262415885925, "submission_FID": 107.67850136756945, "submission_MiFID": 0.4221133291721344}

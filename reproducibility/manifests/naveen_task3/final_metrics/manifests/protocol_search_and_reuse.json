@@ -1,0 +1,25 @@
+{
+  "searched": [
+    "naveen/src",
+    "reference",
+    "../../Downloads/DATA266-Lab1-Pair25-main.zip",
+    "../../Downloads/DATA266_Lab1_Fall_2026.pdf",
+    "../task3_gpu/DATA266_Lab1_Fall_2026.pdf",
+    "../../Downloads/CycleGAN_Training_Flow_Study_Guide.pdf"
+  ],
+  "course_page": "DATA266_Lab1_Fall_2026.pdf, Task 3 metrics, page 9",
+  "reused_exactly": {
+    "feature_extraction": "Epoch-150 official instructor evaluator cell 5",
+    "generator": "naveen/src/models.py Generator",
+    "cycle_preprocessing": "naveen/src/dataset.py load_image(training=False)",
+    "parameters": "Existing executed step-18 notebook output",
+    "training": "Existing epochs CSV history"
+  },
+  "no_additional_course_algorithms_found": true,
+  "LPIPS_pairing": "Real input vs cycle reconstruction; no paired target protocol supplied",
+  "fallbacks": {
+    "KID": "Unbiased degree-3 polynomial MMD",
+    "precision_recall": "k=3 nearest-neighbor feature manifolds",
+    "content_cosine": "Input vs same-filename existing translation"
+  }
+}

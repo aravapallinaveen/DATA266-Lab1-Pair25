@@ -1,0 +1,25 @@
+Final checkpoint:
+task3_gan/naveen/checkpoints/epoch_150.pt
+
+Final prediction counts:
+A2B = 300
+B2A = 7038
+
+Final metrics:
+task3_gan/naveen/metrics_report.csv
+task3_gan/naveen/full_metrics_report.csv
+
+Final submission:
+task3_gan/naveen/submission.csv
+
+Final notebooks:
+task3_gan/naveen/src/Task3_CycleGAN_Naveen_Repro.ipynb
+task3_gan/naveen/src/Task3_Final_Metrics_Epoch150.ipynb
+
+Remaining:
+- human audit
+- inter-rater agreement
+- Kaggle final leaderboard score/rank
+- student analysis
+- team comparison
+- combined final report
