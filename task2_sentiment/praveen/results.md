@@ -69,3 +69,13 @@ The implementation is in `src/train_praveen.py`. This report and the executed no
 - `outputs/*_confusion_matrix.csv`
 - `outputs/data_quality.csv`
 - `outputs/class_distribution.csv`
+
+## Exact Task 2 hardware
+
+- CPU: PASTE EXACT CPU MODEL HERE
+- GPU: PASTE EXACT GPU MODEL HERE
+- Random seed: 8511
+- Original raw log: `training_raw.log`
+- Reproducibility copy: `reproducibility/raw_logs/task2_praveen_training_raw.log`
+
+The reproducibility copy is identical to the original raw log. No retraining was performed for documentation.

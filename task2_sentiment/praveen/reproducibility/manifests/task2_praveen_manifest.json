@@ -1,0 +1,34 @@
+﻿{
+  "task": "Task 2 sentiment classification",
+  "student": "Praveen",
+  "sid": 8511,
+  "dataset": "Yelp Polarity",
+  "seed": 8511,
+  "split": "Deterministic 90/10 stratified train-validation split with official test split",
+  "max_sequence_length": 256,
+  "cpu": "PASTE EXACT CPU MODEL HERE",
+  "gpu": "PASTE EXACT GPU MODEL HERE",
+  "models": [
+    "baseline_cnn",
+    "experimental_bilstm_attention",
+    "experimental_bigru_pool"
+  ],
+  "optimizer": "AdamW",
+  "learning_rate": 0.0002,
+  "betas": [0.9, 0.999],
+  "weight_decay": 0.0001,
+  "loss": "BCEWithLogitsLoss",
+  "batch_size": 256,
+  "epochs": 8,
+  "checkpoints": [
+    "checkpoints/baseline_cnn_best.pt",
+    "checkpoints/experimental_bilstm_attention_best.pt",
+    "checkpoints/experimental_bigru_pool_best.pt"
+  ],
+  "metrics": "metrics_report.csv",
+  "manual_error_review": "outputs/manual_20_error_review.csv",
+  "training_log_original": "training_raw.log",
+  "training_log_copy": "reproducibility/raw_logs/task2_praveen_training_raw.log",
+  "notebook": "src/Task2_Sentiment_Praveen.ipynb",
+  "training_performed_for_this_update": false
+}
