@@ -1,0 +1,7 @@
+direction,metric,mean_score,n_samples
+A2B,style,4.0,15
+A2B,content,4.166666666666667,15
+A2B,artifact,3.6,15
+B2A,style,3.3333333333333335,15
+B2A,content,3.9,15
+B2A,artifact,3.2666666666666666,15
