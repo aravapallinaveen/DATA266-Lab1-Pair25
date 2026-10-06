@@ -22,3 +22,10 @@ Praveen's model is independently configured and does not reproduce Naveen's arch
 
 The shared task requirements remain satisfied: two generators, two discriminators, unpaired domains, adversarial and cycle-consistency losses, image translation, stability analysis, required metrics, direct Kaggle inference, and human audit.
 
+
+## Final selected configuration
+
+The submitted final model uses 64 base channels, 9 generator residual blocks,
+a MultiScaleDiscriminator, no spectral normalization, LSGAN/MSE adversarial
+loss, Adam with learning rate 2e-4, cycle weight 10, identity weight 5,
+batch size 2, replay buffer 50, and 300 epochs.

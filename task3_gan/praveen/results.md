@@ -55,7 +55,7 @@ KID, LPIPS, precision/recall, and Kaggle leaderboard score remain pending unless
 
 Thirty deterministic final outputs were independently reviewed by two human raters:
 15 A2B and 15 B2A samples. Selection used seed 8511 with sorted filenames followed
-by deterministic seeded sampling. Ratings used a 1–5 scale.
+by deterministic seeded sampling. Ratings used a 1–5 scale. Artifact ratings measure severity: 1 = no visible artifacts and 5 = severe visible artifacts; lower is better.
 
 Artifact ratings measure artifact severity: 1 = no visible artifacts and 5 = severe visible artifacts; lower is better.
 
@@ -73,4 +73,5 @@ Artifact ratings measure artifact severity: 1 = no visible artifacts and 5 = sev
 
 Detailed ratings are stored in `outputs/human_audit_30_samples.csv`.
 Aggregate results are stored in `outputs/human_audit_summary.csv`.
+
 
