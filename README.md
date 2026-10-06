@@ -1,18 +1,24 @@
 # DATA266 Lab 1 - Pair 25
 
-This repository contains the team submission for DATA266 Lab 1. Each member keeps independent work under their own folder in `task1_llm/`, `task2_sentiment/`, and `task3_gan/`.
+This repository contains the team submission for DATA266 Lab 1. Naveen and Praveen maintain independent implementations under separate folders for all three tasks.
+
+## Naveen (SID 0171)
+
+- Task 1: `task1_llm/naveen/`
+- Task 2: `task2_sentiment/naveen/`
+- Task 3: `task3_gan/naveen/`
 
 ## Praveen (SID 8511)
 
 - Task 1: `task1_llm/praveen/`
-- Task 2: `task2_sentiment/praveen/` - unfinished and must be trained/evaluated independently
-- Task 3: `task3_gan/praveen/` - independent CycleGAN implementation and notebook
+- Task 2: `task2_sentiment/praveen/`
+- Task 3: `task3_gan/praveen/`
 
-## Naveen
+Each member folder contains the relevant implementation, metrics, outputs, analysis, and results summary.
 
-- Task 1: `task1_llm/naveen/`
-- Task 2: `task2_sentiment/naveen/`
+## Smoke test
 
-## Reproducibility
+From the repository root:
 
-Do not commit raw datasets, personal paths, credentials, or API keys. Keep raw logs unchanged after a run and record the exact hardware and software environment in `reproducibility/`.
+```bash
+python task3_gan/praveen/src/train.py --config task3_gan/praveen/src/config.json --output-root task3_gan/praveen/smoke_outputs --smoke-test --synthetic-smoke-data --device cpu
