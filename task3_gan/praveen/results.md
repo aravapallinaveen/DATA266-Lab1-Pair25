@@ -18,7 +18,7 @@ The baseline code passed a local CUDA training/inference validation on an NVIDIA
 | Photo -> Monet | 92.867265 | local validation |
 | Mean | 95.598355 | local validation |
 
-KID, LPIPS, precision/recall, human-audit metrics, and the official Kaggle leaderboard score remain pending for the final multiscale run.
+KID, LPIPS, precision/recall, and the official Kaggle leaderboard score remain pending for the final multiscale run. The human audit has been completed and is reported below.
 
 ## Required evidence to add after the official run
 
@@ -27,7 +27,7 @@ KID, LPIPS, precision/recall, human-audit metrics, and the official Kaggle leade
 - `full_metrics_report.csv`
 - raw training log under `reproducibility/raw_logs/`
 - exact GPU, elapsed time, images/sec, peak VRAM, and NaN/Inf counts
-- 30 fixed-sample audit completed by two raters with agreement statistic
+- 30 fixed-sample audit completed by two raters with agreement statistics; see the Human audit section below
 - Kaggle submission and public/private score
 
 ## Final multiscale RTX 4090 run
@@ -47,7 +47,7 @@ The final multiscale CycleGAN run used an NVIDIA GeForce RTX 4090.
 
 The final evaluator generated 300 A2B images and 7,038 B2A images. The reported training time of 72.77 minutes refers to the resumed final training segment, not the complete run.
 
-KID, LPIPS, precision/recall, human-audit metrics, and Kaggle leaderboard score remain pending unless officially evaluated.
+KID, LPIPS, precision/recall, and Kaggle leaderboard score remain pending unless officially evaluated. The human-audit metrics are complete and reported below.
 
 
 
@@ -56,6 +56,8 @@ KID, LPIPS, precision/recall, human-audit metrics, and Kaggle leaderboard score 
 Thirty deterministic final outputs were independently reviewed by two human raters:
 15 A2B and 15 B2A samples. Selection used seed 8511 with sorted filenames followed
 by deterministic seeded sampling. Ratings used a 1–5 scale.
+
+Artifact ratings measure artifact severity: 1 = no visible artifacts and 5 = severe visible artifacts; lower is better.
 
 | Measure | Result |
 |---|---:|
@@ -71,3 +73,4 @@ by deterministic seeded sampling. Ratings used a 1–5 scale.
 
 Detailed ratings are stored in `outputs/human_audit_30_samples.csv`.
 Aggregate results are stored in `outputs/human_audit_summary.csv`.
+
