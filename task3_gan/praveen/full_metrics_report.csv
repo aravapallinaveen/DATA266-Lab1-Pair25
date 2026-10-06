@@ -13,13 +13,13 @@ A2B,cycle_L1,0.1270441223,local_validation,Mean pixel L1 over 300 cycle-matched 
 B2A,cycle_L1,0.1363788804,local_validation,Mean pixel L1 over 7038 cycle-matched pairs
 A2B,content_cosine,0.8229490374028683,local_validation,Mean content cosine over 300 generated images
 B2A,content_cosine,0.7893867940171118,local_validation,Mean content cosine over 7038 generated images
-A2B,human_style,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,human_content,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,human_artifacts,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-A2B,human_kappa,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+A2B,human_style,4,local_human_audit,Mean style score from two independent human raters
+A2B,human_content,4.233333,local_human_audit,Mean content score from two independent human raters
+A2B,human_artifacts,3.933333,local_human_audit,Mean artifact score; 1=no artifacts and 5=severe artifacts
+A2B,human_kappa,0.621237,local_human_audit,Mean quadratic weighted Cohen kappa across three categories
 A2B,kaggle_score,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,human_style,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,human_content,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,human_artifacts,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
-B2A,human_kappa,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit
+B2A,human_style,4.033333,local_human_audit,Mean style score from two independent human raters
+B2A,human_content,4.266667,local_human_audit,Mean content score from two independent human raters
+B2A,human_artifacts,3.933333,local_human_audit,Mean artifact score; 1=no artifacts and 5=severe artifacts
+B2A,human_kappa,0.613284,local_human_audit,Mean quadratic weighted Cohen kappa across three categories
 B2A,kaggle_score,,pending,Not computed from current observed outputs; use class-approved evaluator or human audit

@@ -1,0 +1,4 @@
+direction,samples,mean_style,weighted_kappa_style,exact_agreement_style,mean_content,weighted_kappa_content,exact_agreement_content,mean_artifacts,weighted_kappa_artifacts,exact_agreement_artifacts
+A2B,15,4,0.666667,73.33,4.233333,0.482759,66.67,3.933333,0.714286,73.33
+B2A,15,4.033333,0.769231,80.0,4.266667,0.237288,60.0,3.933333,0.833333,86.67
+Overall,30,4.016667,0.72,76.67,4.25,0.367816,63.33,3.933333,0.769231,80.0

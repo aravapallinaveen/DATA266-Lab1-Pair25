@@ -49,3 +49,25 @@ The final evaluator generated 300 A2B images and 7,038 B2A images. The reported 
 
 KID, LPIPS, precision/recall, human-audit metrics, and Kaggle leaderboard score remain pending unless officially evaluated.
 
+
+
+## Human audit of final CycleGAN outputs
+
+Thirty deterministic final outputs were independently reviewed by two human raters:
+15 A2B and 15 B2A samples. Selection used seed 8511 with sorted filenames followed
+by deterministic seeded sampling. Ratings used a 1–5 scale.
+
+| Measure | Result |
+|---|---:|
+| Mean style score | 4.016667 |
+| Mean content score | 4.25 |
+| Mean artifact score | 3.933333 |
+| Weighted kappa — style | 0.72 |
+| Weighted kappa — content | 0.367816 |
+| Weighted kappa — artifacts | 0.769231 |
+| Exact agreement — style | 76.67% |
+| Exact agreement — content | 63.33% |
+| Exact agreement — artifacts | 80.0% |
+
+Detailed ratings are stored in `outputs/human_audit_30_samples.csv`.
+Aggregate results are stored in `outputs/human_audit_summary.csv`.
