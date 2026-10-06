@@ -1,10 +1,10 @@
-DATA266 Lab 1 — Task 1 Manifest
+DATA266 Lab 1 - Task 1 Manifest
 
 Student: Naveen Aravapalli
 Task: GPT-Style LLM From Scratch
 
 Best checkpoint:
-D:\DATA266_Lab1\task1_llm\naveen\checkpoints\task1_gpt_best.pt
+task1_llm/naveen/checkpoints/task1_gpt_best.pt
 
 Best epoch:
 10
@@ -13,28 +13,28 @@ Best validation loss:
 0.628490
 
 Metrics:
-D:\DATA266_Lab1\task1_llm\naveen\metrics_report.csv
+task1_llm/naveen/metrics_report.csv
 
 Training history:
-D:\DATA266_Lab1\task1_llm\naveen\task1_training_history.csv
+task1_llm/naveen/task1_training_history.csv
 
 Raw training log:
-D:\DATA266_Lab1\reproducibility\raw_logs\task1_llm_naveen_training_raw.txt
+reproducibility/raw_logs/task1_llm_naveen_training_raw.txt
 
 Loss curve:
-D:\DATA266_Lab1\task1_llm\naveen\outputs\train_val_loss_curve.png
+task1_llm/naveen/outputs/train_val_loss_curve.png
 
 Generated samples:
-D:\DATA266_Lab1\task1_llm\naveen\outputs\generated_samples.csv
+task1_llm/naveen/outputs/generated_samples.csv
 
 Failure analysis:
-D:\DATA266_Lab1\task1_llm\naveen\failure_analysis.md
+task1_llm/naveen/failure_analysis.md
 
 Results summary:
-D:\DATA266_Lab1\task1_llm\naveen\results.md
+task1_llm/naveen/results.md
 
 Notebook:
-D:\DATA266_Lab1\task1_llm\naveen\src\Task1_LLM_Naveen.ipynb
+task1_llm/naveen/src/Task1_LLM_Naveen.ipynb
 
 GPU:
 NVIDIA GeForce RTX 5090
