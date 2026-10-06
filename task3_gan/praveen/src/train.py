@@ -6,7 +6,7 @@ from torch import nn, optim
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from data import UnpairedDataset
-from models import Generator, Discriminator, count_parameters
+from models import Generator, MultiScaleDiscriminator, count_parameters
 from utils import seed_everything, save_grid, append_jsonl, write_metrics_template
 
 
@@ -23,6 +23,14 @@ class ReplayBuffer:
                 old = self.data[i].clone(); self.data[i] = image; result.append(old)
             else: result.append(image)
         return torch.cat(result)
+
+
+def gan_loss(loss_fn, predictions, target):
+    """Average least-squares GAN loss over discriminator scales."""
+    return sum(
+        loss_fn(prediction, torch.full_like(prediction, target))
+        for prediction in predictions
+    ) / len(predictions)
 
 
 def save_checkpoint(path, epoch, models, opts, schedulers, history):
@@ -54,10 +62,10 @@ def main():
     loader = DataLoader(ds, batch_size=cfg["batch_size"], shuffle=True, num_workers=cfg["num_workers"], pin_memory=device.type == "cuda", drop_last=True)
     G_A2B = Generator(base=cfg["base_channels"], n_blocks=cfg["generator_res_blocks"]).to(device)
     G_B2A = Generator(base=cfg["base_channels"], n_blocks=cfg["generator_res_blocks"]).to(device)
-    D_A = Discriminator(base=cfg["base_channels"], use_spectral_norm=cfg["use_spectral_norm"]).to(device)
-    D_B = Discriminator(base=cfg["base_channels"], use_spectral_norm=cfg["use_spectral_norm"]).to(device)
+    D_A = MultiScaleDiscriminator(base=cfg["base_channels"], use_spectral_norm=cfg["use_spectral_norm"]).to(device)
+    D_B = MultiScaleDiscriminator(base=cfg["base_channels"], use_spectral_norm=cfg["use_spectral_norm"]).to(device)
     models = {"G_A2B": G_A2B, "G_B2A": G_B2A, "D_A": D_A, "D_B": D_B}
-    opts = {"G": optim.AdamW(list(G_A2B.parameters()) + list(G_B2A.parameters()), lr=cfg["learning_rate"], betas=(cfg["beta1"], cfg["beta2"])), "D": optim.AdamW(list(D_A.parameters()) + list(D_B.parameters()), lr=cfg["learning_rate"], betas=(cfg["beta1"], cfg["beta2"]))}
+    opts = {"G": optim.Adam(list(G_A2B.parameters()) + list(G_B2A.parameters()), lr=cfg["learning_rate"], betas=(cfg["beta1"], cfg["beta2"])), "D": optim.Adam(list(D_A.parameters()) + list(D_B.parameters()), lr=cfg["learning_rate"], betas=(cfg["beta1"], cfg["beta2"]))}
     schedulers = {k: optim.lr_scheduler.CosineAnnealingLR(v, T_max=max(1, cfg["epochs"] - cfg["constant_lr_epochs"])) for k, v in opts.items()}
     start_epoch, history = 1, []
     if args.resume:
@@ -66,7 +74,7 @@ def main():
         for k, v in opts.items(): v.load_state_dict(state["optimizers"][k])
         for k, v in schedulers.items(): v.load_state_dict(state["schedulers"][k])
         start_epoch, history = state["epoch"] + 1, state.get("history", [])
-    gan = nn.BCEWithLogitsLoss(); l1 = nn.L1Loss()
+    gan = nn.MSELoss(); l1 = nn.L1Loss()
     fake_a_buf, fake_b_buf = ReplayBuffer(cfg["replay_buffer_size"]), ReplayBuffer(cfg["replay_buffer_size"])
     fixed = next(iter(loader)); fixed_a, fixed_b = fixed["A"].to(device), fixed["B"].to(device)
     run_log = log_dir / "train_raw.jsonl"; t0 = time.time()
@@ -83,15 +91,31 @@ def main():
             fake_b, fake_a = G_A2B(real_a), G_B2A(real_b)
             rec_a, rec_b = G_B2A(fake_b), G_A2B(fake_a)
             id_a, id_b = G_B2A(real_a), G_A2B(real_b)
-            adv_g = gan(D_B(fake_b), torch.ones_like(D_B(fake_b))) + gan(D_A(fake_a), torch.ones_like(D_A(fake_a)))
+            pred_fake_b = D_B(fake_b)
+            pred_fake_a = D_A(fake_a)
+            adv_g = (
+                gan_loss(gan, pred_fake_b, 1.0)
+                + gan_loss(gan, pred_fake_a, 1.0)
+            )
             cycle = l1(rec_a, real_a) + l1(rec_b, real_b)
             identity = l1(id_a, real_a) + l1(id_b, real_b)
             loss_g = adv_g + cfg["lambda_cycle"] * cycle + cfg["lambda_identity"] * identity
             loss_g.backward(); opts["G"].step()
             opts["D"].zero_grad(set_to_none=True)
             old_a, old_b = fake_a_buf.push_and_pop(fake_a), fake_b_buf.push_and_pop(fake_b)
-            loss_da = (gan(D_A(real_a), torch.ones_like(D_A(real_a))) + gan(D_A(old_a.detach()), torch.zeros_like(D_A(old_a)))) * 0.5
-            loss_db = (gan(D_B(real_b), torch.ones_like(D_B(real_b))) + gan(D_B(old_b.detach()), torch.zeros_like(D_B(old_b)))) * 0.5
+            pred_real_a = D_A(real_a)
+            pred_old_a = D_A(old_a.detach())
+            pred_real_b = D_B(real_b)
+            pred_old_b = D_B(old_b.detach())
+
+            loss_da = (
+                gan_loss(gan, pred_real_a, 1.0)
+                + gan_loss(gan, pred_old_a, 0.0)
+            ) * 0.5
+            loss_db = (
+                gan_loss(gan, pred_real_b, 1.0)
+                + gan_loss(gan, pred_old_b, 0.0)
+            ) * 0.5
             loss_d = loss_da + loss_db; loss_d.backward(); opts["D"].step()
             vals = {"G": loss_g.item(), "D": loss_d.item(), "adv": adv_g.item(), "cycle": cycle.item(), "identity": identity.item()}
             for k, v in vals.items(): epoch_sums[k] += v

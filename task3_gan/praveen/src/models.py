@@ -1,6 +1,7 @@
 """Praveen SID 8511 CycleGAN models."""
 import torch
 from torch import nn
+import torch.nn.functional as F
 from torch.nn.utils import spectral_norm
 
 
@@ -82,6 +83,41 @@ class Discriminator(nn.Module):
 
     def forward(self, x):
         return self.net(x)
+
+
+class MultiScaleDiscriminator(nn.Module):
+    """Two PatchGAN discriminators operating at full and half resolution."""
+    def __init__(self, in_channels=3, base=48, use_spectral_norm=False):
+        super().__init__()
+        self.discriminators = nn.ModuleList([
+            Discriminator(
+                in_channels=in_channels,
+                base=base,
+                use_spectral_norm=use_spectral_norm,
+            ),
+            Discriminator(
+                in_channels=in_channels,
+                base=base,
+                use_spectral_norm=use_spectral_norm,
+            ),
+        ])
+
+    def forward(self, x):
+        outputs = []
+        current = x
+
+        for index, discriminator in enumerate(self.discriminators):
+            outputs.append(discriminator(current))
+            if index + 1 < len(self.discriminators):
+                current = F.avg_pool2d(
+                    current,
+                    kernel_size=3,
+                    stride=2,
+                    padding=1,
+                    count_include_pad=False,
+                )
+
+        return outputs
 
 
 def count_parameters(model):

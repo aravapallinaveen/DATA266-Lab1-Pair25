@@ -1,59 +1,51 @@
-# Praveen - Task 3 CycleGAN Results
+﻿# Praveen - Task 3 CycleGAN Results
 
 SID: 8511  
 Domains: Monet (A) and Photo (B)  
-Model: Independent Praveen SID 8511 CycleGAN configuration documented in `src/CONFIG_COMPARISON.md`.
+Model: the independent configuration documented in `src/CONFIG_COMPARISON.md`.
 
 ## Reproducibility status
 
-The implementation, notebook, RTX 4090 training log, and metrics report are committed. The full training run completed on a RunPod NVIDIA GeForce RTX 4090 using CUDA.
+The implementation, training code, final multiscale configuration, and evaluator results are documented here. The final run was executed on RunPod using an NVIDIA GeForce RTX 4090.
 
-## RTX 4090 training run
+## Baseline RTX 4090 local validation run
 
-| Item | Result |
-|---|---:|
-| GPU | NVIDIA GeForce RTX 4090 |
-| Device | CUDA |
-| Epochs | 200 |
-| Training duration | 48.08 minutes |
-| Monet images used for A2B inference | 300 |
-| Photo images used for B2A inference | 7,038 |
-
-## Local-validation metrics
-
-The following FID values were computed by the local evaluator and are labeled local validation. They should be replaced with official class-evaluator values if the class evaluator is required.
+The baseline code passed a local CUDA training/inference validation on an NVIDIA GeForce RTX 4090. The local validation produced 300 A2B and 7,038 B2A translations. The reported local FID values were:
 
 | Direction | FID | Status |
 |---|---:|---|
-| Monet -> Photo (A2B) | 98.329445 | local validation |
-| Photo -> Monet (B2A) | 92.867265 | local validation |
+| Monet -> Photo | 98.329445 | local validation |
+| Photo -> Monet | 92.867265 | local validation |
 | Mean | 95.598355 | local validation |
 
-The observed mean content-cosine values were:
+KID, LPIPS, precision/recall, human-audit metrics, and the official Kaggle leaderboard score remain pending for the final multiscale run.
 
-| Direction | Content cosine | Status |
-|---|---:|---|
-| Monet -> Photo (A2B) | 0.8229490374 | local validation |
-| Photo -> Monet (B2A) | 0.7893867940 | local validation |
+## Required evidence to add after the official run
 
-## Metrics still pending
+- `checkpoints/latest.pt`
+- `outputs/pred_A2B/` and `outputs/pred_B2A/`
+- `full_metrics_report.csv`
+- raw training log under `reproducibility/raw_logs/`
+- exact GPU, elapsed time, images/sec, peak VRAM, and NaN/Inf counts
+- 30 fixed-sample audit completed by two raters with agreement statistic
+- Kaggle submission and public/private score
 
-The following metrics were not produced by the current evaluator and remain pending:
+## Final multiscale RTX 4090 run
 
-- KID
-- Generative precision
-- Generative recall
-- LPIPS
-- Cycle L1
-- Human style, content, and artifact scores
-- Human inter-rater kappa
-- Kaggle score
+The final multiscale CycleGAN run used an NVIDIA GeForce RTX 4090.
 
-These values must come from the class-approved evaluator, a documented two-rater human audit, or the Kaggle result, as applicable. No values are fabricated in `full_metrics_report.csv`.
+| Item | Result |
+|---|---:|
+| Epochs | 300 |
+| B2A FID | 109.365 |
+| A2B FID | 116.184 |
+| Overall FID | 112.774391 |
+| B2A MiFID | 0.4129 |
+| A2B MiFID | 0.4335 |
+| Overall MiFID | 0.423197 |
+| Kaggle submission | `submission.csv` |
 
-## Saved run evidence
+The final evaluator generated 300 A2B images and 7,038 B2A images. The reported training time of 72.77 minutes refers to the resumed final training segment, not the complete run.
 
-- `training_4090.log` records the completed 200-epoch training run.
-- `full_metrics_report.csv` records the observed local-validation metrics and labels unavailable metrics as pending.
-- `outputs/checkpoints/latest.pt` and generated inference archives are retained with the local run artifacts because they exceed normal GitHub file-size limits.
+KID, LPIPS, precision/recall, human-audit metrics, and Kaggle leaderboard score remain pending unless officially evaluated.
 
